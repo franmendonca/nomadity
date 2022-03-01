@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   acts_as_favoritable
+  acts_as_favoritor
 end
