@@ -10,6 +10,9 @@ category1 = Category.create(
   name: "Yoga Studios"
 )
 category2 = Category.create(
+  name: "gym"
+=======
+category2 = Category.create(
   name: "Co-working Spaces"
 )
 category3 = Category.create(
@@ -26,8 +29,6 @@ category6 = Category.create(
 )
 puts "Created #{Category.count} categories"
 
-categories = Category.all
-
 city1 = City.create!(
   name: "Lisbon",
   address: "PRAÇA DO MUNICÍPIO
@@ -35,15 +36,12 @@ city1 = City.create!(
   Portugal",
   latitude: 38.7084432500784, longitude: -9.139392688623499
 )
-
 city2 = City.create!(
   name: "Porto",
   address: "R. Clube dos Fenianos 5, 4000-407 Porto",
   latitude: 41.159251036303075, longitude: -8.629319827759867
 )
 puts "Created #{City.count} cities"
-
-cities = City.all
 
 User.create!(
   username: "Pedro", email: "pedro@lewagon.com",
@@ -64,4 +62,5 @@ puts "Created #{User.count} users"
     latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
   )
 end
+
 puts "Created #{Experience.count} experiences"
