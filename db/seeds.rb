@@ -9,7 +9,24 @@ Category.destroy_all
 category1 = Category.create(
   name: "Yoga Studios"
 )
+category2 = Category.create(
+  name: "Co-working Spaces"
+)
+category3 = Category.create(
+  name: "Grocery Shops"
+)
+category4 = Category.create(
+  name: "Gyms"
+)
+category5 = Category.create(
+  name: "Cafes"
+)
+category6 = Category.create(
+  name: "Co-living Spaces"
+)
 puts "Created #{Category.count} categories"
+
+categories = Category.all
 
 city1 = City.create!(
   name: "Lisbon",
@@ -18,7 +35,15 @@ city1 = City.create!(
   Portugal",
   latitude: 38.7084432500784, longitude: -9.139392688623499
 )
+
+city2 = City.create!(
+  name: "Porto",
+  address: "R. Clube dos Fenianos 5, 4000-407 Porto",
+  latitude: 41.159251036303075, longitude: -8.629319827759867
+)
 puts "Created #{City.count} cities"
+
+cities = City.all
 
 User.create!(
   username: "Pedro", email: "pedro@lewagon.com",
@@ -29,12 +54,14 @@ User.create!(
 )
 puts "Created #{User.count} users"
 
-Experience.create!(
-  city_id: city1.id,
-  category_id: category1.id,
-  name: "Shambhala", address: "Rua do Conde Redondo, 88",
-  description: "One of the best Yoga studios in town right now",
-  website_url: "www.google.com",
-  latitude: 38.736946, longitude: -9.142685
-)
+20.times do
+  Experience.create!(
+    city: cities.sample,
+    category: categories.sample,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.google.com",
+    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  )
+end
 puts "Created #{Experience.count} experiences"
