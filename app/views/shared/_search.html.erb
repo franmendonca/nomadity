@@ -1,0 +1,7 @@
+<%= form_with url: categories_path, method: :get do |f| %>
+  <%= f.text_field :city,
+                    class: "form-control",
+                    placeholder: 'Type a city',
+                    value: params[:city]
+  %>
+<% end %>
