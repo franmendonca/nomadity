@@ -1,0 +1,6 @@
+<% @experiences.each do |experience| %>
+  <h2> <%= experience.name %> </h2>
+  <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
+<% end %>
+
+<%= link_to "Home", root_path, class: "btn btn-primary" %>
