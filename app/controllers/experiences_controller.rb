@@ -4,7 +4,9 @@ class ExperiencesController < ApplicationController
     @experiences = Experience.all
   end
 
-  def show; end
+  def show
+    @user = current_user
+  end
 
   private
 

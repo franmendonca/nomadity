@@ -9,6 +9,10 @@ Category.destroy_all
 category1 = Category.create(
   name: "Yoga Studios"
 )
+
+category2 = Category.create(
+  name: "gym"
+)
 puts "Created #{Category.count} categories"
 
 city1 = City.create!(
@@ -18,6 +22,7 @@ city1 = City.create!(
   Portugal",
   latitude: 38.7084432500784, longitude: -9.139392688623499
 )
+
 puts "Created #{City.count} cities"
 
 User.create!(
@@ -36,5 +41,14 @@ Experience.create!(
   description: "One of the best Yoga studios in town right now",
   website_url: "www.google.com",
   latitude: 38.736946, longitude: -9.142685
+)
+
+Experience.create!(
+  city_id: city1.id,
+  category_id: category2.id,
+  name: "Ozieri", address: "Rua do Conde, 100",
+  description: "One of the best of the city",
+  website_url: "www.google.com",
+  latitude: 39.736946, longitude: -9.132685
 )
 puts "Created #{Experience.count} experiences"
