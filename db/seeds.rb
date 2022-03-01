@@ -10,9 +10,6 @@ category1 = Category.create(
   name: "Yoga Studios"
 )
 category2 = Category.create(
-  name: "gym"
-=======
-category2 = Category.create(
   name: "Co-working Spaces"
 )
 category3 = Category.create(
@@ -29,6 +26,7 @@ category6 = Category.create(
 )
 puts "Created #{Category.count} categories"
 
+categories = Category.all
 city1 = City.create!(
   name: "Lisbon",
   address: "PRAÇA DO MUNICÍPIO
@@ -43,6 +41,7 @@ city2 = City.create!(
 )
 puts "Created #{City.count} cities"
 
+cities = City.all
 User.create!(
   username: "Pedro", email: "pedro@lewagon.com",
   password: "12345678",
