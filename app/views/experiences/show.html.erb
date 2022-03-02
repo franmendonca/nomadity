@@ -1,9 +1,11 @@
-  <p> <%= @experience.description %></p>
-  <p> <%= @experience.address %></p>
-  <p> <%= @experience.website_url %></p>
+<p> <%= @experience.description %></p>
+<p> <%= @experience.address %></p>
+<p> <%= @experience.website_url %></p>
+<p> <%= @experience.category.name %></p>
+<p> <%= @experience.city.name %></p>
 
 <%= link_to "Back", experiences_path, class: "btn btn-primary" %>
-<%= link_to "Home", root_path, class: "btn btn-primary" %>
+<%= link_to "Home", root_path, class: "btn btn-secondary" %>
 <% if !current_user.favorited?(@experience)%>
   <%= link_to "Favorite", experience_favorites_path(@experience),method: :post, class: "btn btn-primary" %>
 <% else %>

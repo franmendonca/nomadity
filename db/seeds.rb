@@ -7,22 +7,28 @@ User.destroy_all
 Category.destroy_all
 
 category1 = Category.create(
-  name: "Yoga Studios"
+  name: "Yoga Studios",
+  ref: "yoga"
 )
 category2 = Category.create(
-  name: "Co-working Spaces"
+  name: "Co-working Spaces",
+  ref: "cowork"
 )
 category3 = Category.create(
-  name: "Grocery Shops"
+  name: "Grocery Shops",
+  ref: "grocery"
 )
 category4 = Category.create(
-  name: "Gyms"
+  name: "Gyms",
+  ref: "gyms"
 )
 category5 = Category.create(
-  name: "Cafes"
+  name: "Cafes",
+  ref: "cafes"
 )
 category6 = Category.create(
-  name: "Co-living Spaces"
+  name: "Co-living Spaces",
+  ref: "coliving"
 )
 puts "Created #{Category.count} categories"
 
@@ -32,12 +38,14 @@ city1 = City.create!(
   address: "PRAÇA DO MUNICÍPIO
   1100-365 - LISBOA
   Portugal",
-  latitude: 38.7084432500784, longitude: -9.139392688623499
+  latitude: 38.7084432500784, longitude: -9.139392688623499,
+  ref: "lisbon"
 )
 city2 = City.create!(
   name: "Porto",
   address: "R. Clube dos Fenianos 5, 4000-407 Porto",
-  latitude: 41.159251036303075, longitude: -8.629319827759867
+  latitude: 41.159251036303075, longitude: -8.629319827759867,
+  ref: "porto"
 )
 puts "Created #{City.count} cities"
 

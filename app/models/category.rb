@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  validates :name, :ref, presence: true, uniqueness: true
   has_many :experiences
 end
