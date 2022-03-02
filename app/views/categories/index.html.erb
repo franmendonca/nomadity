@@ -1,5 +1,4 @@
 <% @categories.each do |category| %>
-  <h2> <%= category.name %> </h2>
+  <h2> <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %> </h2>
 <% end %>
-
 <%= link_to "Home", root_path, class: "btn btn-primary" %>
