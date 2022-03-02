@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :experiences, only: [:index, :show] do
-    resources :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:create]
+  post 'delete_favorites', to: 'favorites#destroy'
   end
 
   resources :categories, only: [:index]

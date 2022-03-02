@@ -5,8 +5,8 @@
 <%= link_to "Back", experiences_path, class: "btn btn-primary" %>
 <%= link_to "Home", root_path, class: "btn btn-primary" %>
 <% if !current_user.favorited?(@experience)%>
+
   <%= link_to "Favorite", experience_favorites_path(@experience),method: :post, class: "btn btn-primary" %>
-<%elsif current_user.favorited?(@experience) %>
-<%= raise %>
-  <%= link_to "Unfavorite", experience_favorites_path(@experience),method: :delete, class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Unfavorite", experience_delete_favorites_path(@experience),method: :post, class: "btn btn-primary" %>
 <% end %>
