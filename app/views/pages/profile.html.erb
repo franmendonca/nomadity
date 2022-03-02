@@ -1,2 +1,12 @@
-<%= @user.username %>
-<h1>i'm a user</h1>
+<h1>Welcome in  your profile page <%= @user.username %></h1>
+<br><br><br>
+<h2>Favorited Experiences:</h2>
+<% @all_favorites.each do |favorite| %>
+  <h2>Name:  <%= favorite.name %></h2>
+  <p>City:  <%= favorite.city[:name]%></p>
+  <p>Description: <%= favorite.description %></p>
+<% end %>
+
+
+<%= link_to "lisbon", :controller => "pages", :action => 'profile', :query => "lisbon" %>
+<%= link_to "porto", :controller => "pages", :action => 'profile', :query => "porto" %>
