@@ -7,7 +7,8 @@
 <%= link_to "Back", experiences_path, class: "btn btn-primary" %>
 <%= link_to "Home", root_path, class: "btn btn-secondary" %>
 <% if !current_user.favorited?(@experience)%>
+
   <%= link_to "Favorite", experience_favorites_path(@experience),method: :post, class: "btn btn-primary" %>
 <% else %>
-  <p>You favorited this experience</p>
+  <%= link_to "Unfavorite", experience_delete_favorites_path(@experience),method: :post, class: "btn btn-primary" %>
 <% end %>
