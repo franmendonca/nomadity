@@ -1,12 +1,7 @@
-<h1>Welcome in  your profile page <%= @user.username %></h1>
-<br><br><br>
-<h2>Favorited Experiences:</h2>
-<% @all_favorites.each do |favorite| %>
-  <h2>Name:  <%= favorite.name %></h2>
-  <p>City:  <%= favorite.city[:name]%></p>
-  <p>Description: <%= favorite.description %></p>
-<% end %>
-
-
-<%= link_to "lisbon", :controller => "pages", :action => 'profile', :query => "lisbon" %>
-<%= link_to "porto", :controller => "pages", :action => 'profile', :query => "porto" %>
+<div id="cards" class="col-8">
+  <h1>Welcome in  your profile page <%= @user.username %></h1>
+  <br>
+  <h2>Favorited Experiences in : <a class="btn btn-gradient" href="<%= link_to "lisbon", :controller => "pages", :action => 'profile', :query => "lisbon" %>">Lisbon</a>
+  <%= link_to "porto", :controller => "pages", :action => 'profile', :query => "porto" %> </h2>
+  <%= render "shared/favorite_card", class: "col-sm-12" %>
+</div>
