@@ -6,6 +6,8 @@
     <div class="container">
       <% @experiences.each do |experience| %>
       <%= render 'shared/experience_card', experience: experience %>
+      <%= render 'shared/show_modal', experience: experience %>
+
       <% end %>
     </div>
       <%#= link_to "Home", root_path, class: "btn btn-primary" %>
