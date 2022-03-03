@@ -155,7 +155,7 @@ longitudep = rand(-8.69..-8.59)
 latitudel = rand(38.69..38.80)
 longitudel = rand(-9.30..-9.10)
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   yoga1 = Experience.create!(
@@ -178,7 +178,7 @@ longitudel = rand(-9.30..-9.10)
   yoga1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   yoga2 = Experience.create!(
@@ -201,7 +201,7 @@ end
   yoga2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cowork1 = Experience.create!(
@@ -224,7 +224,7 @@ end
   cowork1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   cowork2 = Experience.create!(
@@ -247,7 +247,7 @@ end
   cowork2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   grocery1 = Experience.create!(
@@ -270,7 +270,7 @@ end
   grocery1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   grocery2 = Experience.create!(
@@ -293,7 +293,7 @@ end
   grocery2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   gym1 = Experience.create!(
@@ -316,7 +316,7 @@ end
   gym1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   gym2 = Experience.create!(
@@ -339,7 +339,7 @@ end
   gym2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cafe1 = Experience.create!(
@@ -362,7 +362,7 @@ end
   cafe1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   cafe2 = Experience.create!(
@@ -385,7 +385,7 @@ end
   cafe2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   coliving1 = Experience.create!(
@@ -408,7 +408,7 @@ end
   coliving1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   coliving2 = Experience.create!(
@@ -431,7 +431,7 @@ end
   coliving2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   night1 = Experience.create!(
@@ -454,7 +454,7 @@ end
   night1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   night2 = Experience.create!(
@@ -477,7 +477,7 @@ end
   night2.save
 end
 
-2.times do
+5.times do
   latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   restaurant1 = Experience.create!(
@@ -500,7 +500,7 @@ end
   restaurant1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   restaurant2 = Experience.create!(
