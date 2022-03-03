@@ -1,13 +1,6 @@
-<br>
-  <p class="index-title">Select your category</p>
-    <div class="container">
-      <div class="grid">
-          <% @experiences.each do |experience| %>
-        <div class="grid-item">
-          <h2> <%= experience.name %> </h2>
-          <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
-        </div>
-        <% end %>
-      </div>
-        <%= link_to "Home", root_path, class: "btn btn-primary" %>
-    </div>
+<% @experiences.each do |experience| %>
+  <h2> <%= experience.name %> </h2>
+  <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
+<% end %>
+<%= link_to "Home", root_path, class: "btn btn-primary" %>
+<%= link_to "Back to categories", categories_path, class: "btn btn-secondary" %>
