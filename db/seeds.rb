@@ -152,11 +152,11 @@ selina.save
 
 latitudep = rand(41.14..41.17)
 longitudep = rand(-8.69..-8.59)
-latitudel = rand(38.69..41.17)
+latitudel = rand(38.69..38.80)
 longitudel = rand(-9.30..-9.10)
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   yoga1 = Experience.create!(
     city: city1,
@@ -202,7 +202,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cowork1 = Experience.create!(
     city: city1,
@@ -248,7 +248,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   grocery1 = Experience.create!(
     city: city1,
@@ -294,7 +294,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   gym1 = Experience.create!(
     city: city1,
@@ -340,7 +340,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cafe1 = Experience.create!(
     city: city1,
@@ -386,7 +386,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   coliving1 = Experience.create!(
     city: city1,
@@ -432,7 +432,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   night1 = Experience.create!(
     city: city1,
@@ -478,7 +478,7 @@ end
 end
 
 2.times do
-  latitudel = rand(38.69..41.17)
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   restaurant1 = Experience.create!(
     city: city1,
