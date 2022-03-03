@@ -4,12 +4,15 @@
     <%= render "shared/profile_sidebar" %>
    </div>
    <br>
-   <div class="col-6">
+   <div class="col-4 mt-3">
       <div class="d-flex">
         <h2>Favorited in : <%= link_to "lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
       </div>
      <%= render "shared/favorite_card", class: "col-sm-12" %>
    </div>
+      <div class="col-5 mt-3">
+        <%= render "shared/mapbox" %>
+      </div>
   </div>
 </div>
