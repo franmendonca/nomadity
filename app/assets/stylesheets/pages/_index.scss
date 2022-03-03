@@ -1,2 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "mapbox-gl/dist/mapbox-gl";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
