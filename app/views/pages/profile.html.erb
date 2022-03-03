@@ -1,12 +1,18 @@
-<h1>Welcome in  your profile page <%= @user.username %></h1>
-<br><br><br>
-<h2>Favorited Experiences:</h2>
-<% @all_favorites.each do |favorite| %>
-  <h2>Name:  <%= favorite.name %></h2>
-  <p>City:  <%= favorite.city[:name]%></p>
-  <p>Description: <%= favorite.description %></p>
-<% end %>
 
-
-<%= link_to "lisbon", :controller => "pages", :action => 'profile', :query => "lisbon" %>
-<%= link_to "porto", :controller => "pages", :action => 'profile', :query => "porto" %>
+  <div class="row">
+   <div class="col-2 m-3">
+    <%= render "shared/profile_sidebar" %>
+   </div>
+   <br>
+   <div class="col-4 mt-3">
+      <div class="d-flex">
+        <h2>Favorited in : <%= link_to "lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
+        <%= link_to "porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
+      </div>
+     <%= render "shared/favorite_card", class: "col-sm-12" %>
+   </div>
+      <div class="col-5 mt-3">
+        <%= render "shared/mapbox" %>
+      </div>
+  </div>
+</div>

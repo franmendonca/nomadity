@@ -1,7 +1,10 @@
-<%= form_with url: categories_path, method: :get do |f| %>
-  <%= f.text_field :city,
-                    class: "form-control",
-                    placeholder: 'Type a city',
-                    value: params[:city]
+<div class="search-form-control form-group">
+  <%= form_with url: categories_path, method: :get do |f| %>
+    <%= f.text_field :city,
+                      class: "form-control",
+                      placeholder: 'Type a city',
+                      value: params[:city]
   %>
+  <button name="button" type="submit" class="btn btn-primary d-flex align-items-center"><i class="fas fa-search"></i>Search</button>
+  </div>
 <% end %>
