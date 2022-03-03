@@ -45,16 +45,10 @@ puts "Created #{Category.count} categories"
 categories = Category.all
 city1 = City.create!(
   name: "Lisbon",
-  address: "PRAÇA DO MUNICÍPIO
-  1100-365 - LISBOA
-  Portugal",
-  latitude: 38.7084432500784, longitude: -9.139392688623499,
   ref: "lisbon"
 )
 city2 = City.create!(
   name: "Porto",
-  address: "R. Clube dos Fenianos 5, 4000-407 Porto",
-  latitude: 41.159251036303075, longitude: -8.629319827759867,
   ref: "porto"
 )
 puts "Created #{City.count} cities"
@@ -72,11 +66,9 @@ puts "Created #{User.count} users"
 nola = Experience.create!(
   city: city2,
   category: category8,
-  name: "Nola Kitchen", address: "Praça Dona Filipa de Lencastre Nº25
-  4050-259 Porto",
+  name: "Nola Kitchen", address: "Praça Dona Filipa de Lencastre Nº25, 4050-259 Porto",
   description: "NOLA — stands for No Labels — is a new kitchen concept where real food comes first and people are united by a common belief: that real, healthy and tasty food makes us both healthier and happier.",
-  website_url: "https://www.nola.com.en",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://www.nola.com.en"
 )
 
 nphoto1 = URI.open("https://nola.com.pt/wp-content/uploads/2020/04/NOLA-SOBRE03.jpg")
@@ -94,11 +86,9 @@ nola.save
 early = Experience.create!(
   city: city2,
   category: category8,
-  name: "Early", address: "Praça Dona Filipa de Lencastre Nº25
-  4050-259 Porto",
+  name: "Early", address: "Praça Dona Filipa de Lencastre Nº25, 4050-259 Porto",
   description: "Patrícia and Emanuel, siblings, have come to give a breath of fresh air to the address of the old bookstore Contraste. On Rua dos Bragas, EARLY opens early and serves breakfast, brunch, lunch and snacks. The book-filled display was left behind but the idea that also resembles the world of reading is kept: life should be lived calmly, enjoyed with no rush and accompanied by a warm drink and a slice of homemade cake, just like a good book.",
-  website_url: "https://crucreativehub.com/en/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://crucreativehub.com/en/"
 )
 
 ephoto1 = URI.open("http://early.pt/images/LF_EARLY-109.JPG")
@@ -114,11 +104,9 @@ early.save
 cru = Experience.create!(
   city: city2,
   category: category2,
-  name: "Cru Creative Hub", address: "Rua do Rosário, 211
-    4050-524 Porto, Portugal",
+  name: "Cru Creative Hub", address: "Rua do Rosário, 211, 4050-524 Porto, Portugal",
   description: "Patrícia and Emanuel, siblings, have come to give a breath of fresh air to the address of the old bookstore Contraste. On Rua dos Bragas, EARLY opens early and serves breakfast, brunch, lunch and snacks. The book-filled display was left behind but the idea that also resembles the world of reading is kept: life should be lived calmly, enjoyed with no rush and accompanied by a warm drink and a slice of homemade cake, just like a good book.",
-  website_url: "https://crucreativehub.com/en/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://crucreativehub.com/en/"
 )
 
 cphoto1 = URI.open("https://media.timeout.com/images/105816387/750/422/image.jpg")
@@ -136,8 +124,7 @@ selina = Experience.create!(
   category: category2,
   name: "Selina Navi", address: "Rua Das Oliveiras nº 61, 4050-449 Porto, Portugal",
   description: "Get sh*t done at our urban coworking space in Porto, Portugal! Count on fast and reliable Wi-Fi, meeting rooms, and additional facilities to stay productive alongside a vibrant community of locals and nomads.",
-  website_url: "https://www.selina.com/portugal/porto/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://www.selina.com/portugal/porto/"
 )
 
 sphoto1 = URI.open("https://coworker.imgix.net/photos/portugal/porto/selina-navis/2-1643203649.jpg?w=1200&h=0&q=90&auto=format,compress&fit=crop&mark=/template/img/wm_icon.png&markscale=5&markalign=center,middle")
@@ -161,7 +148,7 @@ longitudel = rand(-9.30..-9.10)
   yoga1 = Experience.create!(
     city: city1,
     category: category1,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -184,7 +171,7 @@ end
   yoga2 = Experience.create!(
     city: city2,
     category: category1,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -207,7 +194,7 @@ end
   cowork1 = Experience.create!(
     city: city1,
     category: category2,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -230,7 +217,7 @@ end
   cowork2 = Experience.create!(
     city: city2,
     category: category2,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -253,7 +240,7 @@ end
   grocery1 = Experience.create!(
     city: city1,
     category: category3,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -276,7 +263,7 @@ end
   grocery2 = Experience.create!(
     city: city2,
     category: category3,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -299,7 +286,7 @@ end
   gym1 = Experience.create!(
     city: city1,
     category: category4,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -322,7 +309,7 @@ end
   gym2 = Experience.create!(
     city: city2,
     category: category4,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -345,7 +332,7 @@ end
   cafe1 = Experience.create!(
     city: city1,
     category: category5,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -368,7 +355,7 @@ end
   cafe2 = Experience.create!(
     city: city2,
     category: category5,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -391,7 +378,7 @@ end
   coliving1 = Experience.create!(
     city: city1,
     category: category6,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -414,7 +401,7 @@ end
   coliving2 = Experience.create!(
     city: city2,
     category: category6,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -437,7 +424,7 @@ end
   night1 = Experience.create!(
     city: city1,
     category: category7,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -460,7 +447,7 @@ end
   night2 = Experience.create!(
     city: city2,
     category: category7,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -483,7 +470,7 @@ end
   restaurant1 = Experience.create!(
     city: city1,
     category: category8,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -506,7 +493,7 @@ end
   restaurant2 = Experience.create!(
     city: city2,
     category: category8,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
