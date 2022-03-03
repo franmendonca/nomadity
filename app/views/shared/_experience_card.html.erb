@@ -9,5 +9,15 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
+    <% if !current_user.favorited?(experience)%>
+      <%= link_to experience_favorites_path(experience), method: :post do %>
+      <i class="far fa-heart"></i>
+      <% end %>
+    <% else %>
+      <%= link_to experience_delete_favorites_path(experience), method: :post do %>
+      <i class="fa fa-heart"></i>
+      <% end %>
+    <% end %>
+
   </div>
 </div>
