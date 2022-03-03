@@ -6,5 +6,14 @@
     <h2><%= experience.name %></h2>
     <p><%= experience.address %></p>
     <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
+    <% if !current_user.favorited?(experience)%>
+      <%= link_to experience_favorites_path(experience), method: :post do %>
+      <i class="far fa-heart"></i>
+      <% end %>
+    <% else %>
+      <%= link_to experience_delete_favorites_path(experience), method: :post do %>
+      <i class="fa fa-heart"></i>
+      <% end %>
+    <% end %>
   </div>
 </div>
