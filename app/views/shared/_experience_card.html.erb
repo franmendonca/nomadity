@@ -1,0 +1,10 @@
+<div class="card-experience mt-3 mb-3">
+  <% if experience.photos.attached? %>
+    <%= cl_image_tag experience.photos.sample.key, crop: :fill %>
+  <% end %>
+  <div class="card-experience-infos">
+    <h2><%= experience.name %></h2>
+    <p><%= experience.address %></p>
+    <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
+  </div>
+</div>
