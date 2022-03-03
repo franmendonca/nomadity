@@ -1,6 +1,15 @@
-<% @experiences.each do |experience| %>
-  <h2> <%= experience.name %> </h2>
-  <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
-<% end %>
+<div class="d-flex justify-content-center">
+  <div class="container">
+  <%= render "shared/mapbox" %>
+  </div>
+  <div class="container">
+  <% @experiences.each do |experience| %>
+    <h2> <%= experience.name %> </h2>
+    <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
+  <% end %>
 
-<%= link_to "Home", root_path, class: "btn btn-primary" %>
+  <%= link_to "Home", root_path, class: "btn btn-primary" %>
+
+  <%= link_to "Back to categories", categories_path, class: "btn btn-secondary" %>
+</div>
+

@@ -3,6 +3,14 @@
 <p> <%= @experience.website_url %></p>
 <p> <%= @experience.category.name %></p>
 <p> <%= @experience.city.name %></p>
+<p> <%= @experience.latitude %></p>
+<p> <%= @experience.longitude %></p>
+
+<% if @experience.photos.attached? %>
+  <% @experience.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+<% end %>
 
 <%= link_to "Back", experiences_path, class: "btn btn-primary" %>
 <%= link_to "Home", root_path, class: "btn btn-secondary" %>
