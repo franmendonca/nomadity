@@ -150,14 +150,21 @@ selina.photos.attach(io: sphoto3, filename: 'selina3', content_type: 'image/jpg'
 
 selina.save
 
-10.times do
+latitudep = rand(41.14..41.17)
+longitudep = rand(-8.69..-8.59)
+latitudel = rand(38.69..41.17)
+longitudel = rand(-9.30..-9.10)
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   yoga1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category1,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   yphoto1 = URI.open("https://images.unsplash.com/photo-1615657973599-990d6e05fb8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYSUyMHN0dWRpb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
@@ -171,14 +178,39 @@ selina.save
   yoga1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  yoga2 = Experience.create!(
+    city: city2,
+    category: category1,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  yphoto1 = URI.open("https://images.unsplash.com/photo-1615657973599-990d6e05fb8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYSUyMHN0dWRpb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+  yphoto2 = URI.open("https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+  yphoto3 = URI.open("https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYSUyMHN0dWRpb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+
+  yoga2.photos.attach(io: yphoto1, filename: 'yoga1', content_type: 'image/jpg')
+  yoga2.photos.attach(io: yphoto2, filename: 'yoga2', content_type: 'image/jpg')
+  yoga2.photos.attach(io: yphoto3, filename: 'yoga3', content_type: 'image/jpg')
+
+  yoga2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   cowork1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category2,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   cophoto1 = URI.open("https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y28lMjB3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
@@ -192,14 +224,39 @@ end
   cowork1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  cowork2 = Experience.create!(
+    city: city2,
+    category: category2,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  cophoto1 = URI.open("https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y28lMjB3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
+  cophoto2 = URI.open("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1784&q=80")
+  cophoto3 = URI.open("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y28lMjB3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
+
+  cowork2.photos.attach(io: cophoto1, filename: 'cowork1', content_type: 'image/jpg')
+  cowork2.photos.attach(io: cophoto2, filename: 'cowork2', content_type: 'image/jpg')
+  cowork2.photos.attach(io: cophoto3, filename: 'cowork3', content_type: 'image/jpg')
+
+  cowork2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   grocery1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category3,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   gphoto1 = URI.open("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3JvY2VyaWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
@@ -213,14 +270,39 @@ end
   grocery1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  grocery2 = Experience.create!(
+    city: city2,
+    category: category3,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  gphoto1 = URI.open("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3JvY2VyaWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
+  gphoto2 = URI.open("https://images.unsplash.com/photo-1628102491629-778571d893a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JvY2VyaWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
+  gphoto3 = URI.open("https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80")
+
+  grocery2.photos.attach(io: gphoto1, filename: 'grocery1', content_type: 'image/jpg')
+  grocery2.photos.attach(io: gphoto2, filename: 'grocery2', content_type: 'image/jpg')
+  grocery2.photos.attach(io: gphoto3, filename: 'grocery3', content_type: 'image/jpg')
+
+  grocery2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   gym1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category4,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   gymphoto1 = URI.open("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
@@ -234,14 +316,39 @@ end
   gym1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  gym2 = Experience.create!(
+    city: city2,
+    category: category4,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  gymphoto1 = URI.open("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1500&q=80")
+  gymphoto2 = URI.open("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+  gymphoto3 = URI.open("https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+
+  gym2.photos.attach(io: gymphoto1, filename: 'gym1', content_type: 'image/jpg')
+  gym2.photos.attach(io: gymphoto2, filename: 'gym2', content_type: 'image/jpg')
+  gym2.photos.attach(io: gymphoto3, filename: 'gym3', content_type: 'image/jpg')
+
+  gym2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   cafe1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category5,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   cafephoto1 = URI.open("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80")
@@ -255,14 +362,39 @@ end
   cafe1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  cafe2 = Experience.create!(
+    city: city2,
+    category: category5,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  cafephoto1 = URI.open("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80")
+  cafephoto2 = URI.open("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+  cafephoto3 = URI.open("https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80")
+
+  cafe2.photos.attach(io: cafephoto1, filename: 'cafe1', content_type: 'image/jpg')
+  cafe2.photos.attach(io: cafephoto2, filename: 'cafe2', content_type: 'image/jpg')
+  cafe2.photos.attach(io: cafephoto3, filename: 'cafe3', content_type: 'image/jpg')
+
+  cafe2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   coliving1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category6,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   colivingphoto1 = URI.open("https://images.unsplash.com/photo-1630569263546-b9453bb8c2e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80")
@@ -276,14 +408,39 @@ end
   coliving1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  coliving2 = Experience.create!(
+    city: city2,
+    category: category6,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  colivingphoto1 = URI.open("https://images.unsplash.com/photo-1630569263546-b9453bb8c2e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80")
+  colivingphoto2 = URI.open("https://images.unsplash.com/photo-1541616138747-f4a42c7f0668?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+  colivingphoto3 = URI.open("https://images.unsplash.com/photo-1620989775958-d13edbdd72af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+
+  coliving2.photos.attach(io: colivingphoto1, filename: 'living1', content_type: 'image/jpg')
+  coliving2.photos.attach(io: colivingphoto2, filename: 'living2', content_type: 'image/jpg')
+  coliving2.photos.attach(io: colivingphoto3, filename: 'living3', content_type: 'image/jpg')
+
+  coliving2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   night1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category7,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   nphoto1 = URI.open("https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80")
@@ -297,14 +454,39 @@ end
   night1.save
 end
 
-10.times do
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  night2 = Experience.create!(
+    city: city2,
+    category: category7,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  nphoto1 = URI.open("https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80")
+  nphoto2 = URI.open("https://images.unsplash.com/photo-1598495496118-f8763b94bde5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+  nphoto3 = URI.open("https://images.unsplash.com/photo-1468056961052-15507578a50d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80")
+
+  night2.photos.attach(io: nphoto1, filename: 'night1', content_type: 'image/jpg')
+  night2.photos.attach(io: nphoto2, filename: 'night2', content_type: 'image/jpg')
+  night2.photos.attach(io: nphoto3, filename: 'night3', content_type: 'image/jpg')
+
+  night2.save
+end
+
+2.times do
+  latitudel = rand(38.69..41.17)
+  longitudel = rand(-9.30..-9.10)
   restaurant1 = Experience.create!(
-    city: cities.sample,
+    city: city1,
     category: category8,
     name: Faker::Company.name, address: Faker::Address.street_name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
-    latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+    latitude: latitudel, longitude: longitudel
   )
 
   rphoto1 = URI.open("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
@@ -316,6 +498,29 @@ end
   restaurant1.photos.attach(io: rphoto3, filename: 'restaurant3', content_type: 'image/jpg')
 
   restaurant1.save
+end
+
+2.times do
+  latitudep = rand(41.14..41.17)
+  longitudep = rand(-8.69..-8.59)
+  restaurant2 = Experience.create!(
+    city: city2,
+    category: category8,
+    name: Faker::Company.name, address: Faker::Address.street_name,
+    description: Faker::Lorem.sentence(word_count: 10),
+    website_url: "www.#{Faker::Company.name}.com",
+    latitude: latitudep, longitude: longitudep
+  )
+
+  rphoto1 = URI.open("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1500&q=80")
+  rphoto2 = URI.open("https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1500&q=80")
+  rphoto3 = URI.open("https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1500&q=80")
+
+  restaurant2.photos.attach(io: rphoto1, filename: 'restaurant1', content_type: 'image/jpg')
+  restaurant2.photos.attach(io: rphoto2, filename: 'restaurant2', content_type: 'image/jpg')
+  restaurant2.photos.attach(io: rphoto3, filename: 'restaurant3', content_type: 'image/jpg')
+
+  restaurant2.save
 end
 
 puts "Created #{Experience.count} experiences"

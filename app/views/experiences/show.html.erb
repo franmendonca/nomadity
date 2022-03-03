@@ -3,6 +3,8 @@
 <p> <%= @experience.website_url %></p>
 <p> <%= @experience.category.name %></p>
 <p> <%= @experience.city.name %></p>
+<p> <%= @experience.latitude %></p>
+<p> <%= @experience.longitude %></p>
 
 <% if @experience.photos.attached? %>
   <% @experience.photos.each do |photo| %>
