@@ -11,7 +11,7 @@ category1 = Category.create(
   ref: "yoga"
 )
 category2 = Category.create(
-  name: "Co-working Spaces",
+  name: "Co-working",
   ref: "cowork"
 )
 category3 = Category.create(
@@ -29,6 +29,16 @@ category5 = Category.create(
 category6 = Category.create(
   name: "Co-living Spaces",
   ref: "coliving"
+)
+
+category7 = Category.create(
+  name: "Nightlife",
+  ref: "nightlife"
+)
+
+category8 = Category.create(
+  name: "Restaurants",
+  ref: "restaurants"
 )
 puts "Created #{Category.count} categories"
 
