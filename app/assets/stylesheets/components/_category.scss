@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Space+Mono&display=swap');
+.index-title {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: Bold;
+  font-size: 36px;
+  opacity: 1;
+  color: #FF8800;
+  text-shadow: 1px 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 10;
+  color: #000000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-item{
+
+}
