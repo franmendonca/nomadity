@@ -84,6 +84,31 @@ city2 = City.create!(
   name: "Porto",
   ref: "porto"
 )
+
+city3 = City.create!(
+  name: "London",
+  ref: "london"
+)
+
+city4 = City.create!(
+  name: "Amsterdam",
+  ref: "amsterdam"
+)
+
+city5 = City.create!(
+  name: "Berlin",
+  ref: "berlin"
+)
+
+city6 = City.create!(
+  name: "Milan",
+  ref: "milan"
+)
+
+city7 = City.create!(
+  name: "Denver",
+  ref: "denver"
+)
 puts "Created #{City.count} cities"
 
 cities = City.all
