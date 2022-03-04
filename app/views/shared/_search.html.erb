@@ -8,3 +8,9 @@
   <button name="button" type="submit" class="btn btn-primary d-flex align-items-center"><i class="fas fa-search"></i>Search</button>
   </div>
 <% end %>
+<%# <div class="search-form-control form-group">
+  <%= form_with model: @city, url: categories_path, method: :get do |f| %>
+    <%# <%= f.collection_select(:city_id, City.all, :id, :name) %>
+  <%# <button name="button" type="submit" class="btn btn-primary d-flex align-items-center"><i class="fas fa-search"></i>Search</button> %>
+  <%# </div> %>
+<%# <% end %>
