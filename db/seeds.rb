@@ -26,6 +26,11 @@ category5 = Category.create(
   name: "Cafes",
   ref: "cafes"
 )
+category5photo = URI.open("https://www.pngfind.com/pngs/m/65-653904_icono-cafe-png-cafe-icon-transparent-png.png")
+category5.photo.attach(io: category5photo, filename: 'icon', content_type: 'image/png')
+
+category5.save
+
 category6 = Category.create(
   name: "Co-living Spaces",
   ref: "coliving"
@@ -43,6 +48,7 @@ category8 = Category.create(
 puts "Created #{Category.count} categories"
 
 categories = Category.all
+
 city1 = City.create!(
   name: "Lisbon",
   ref: "lisbon"
