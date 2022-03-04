@@ -7,7 +7,7 @@
     <p><%= experience.address %></p>
     <p> <%= link_to "Show", experience_path(experience), class: "btn btn-primary" %></p>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+  Show
 </button>
     <% if !current_user.favorited?(experience)%>
       <%= link_to experience_favorites_path(experience), method: :post do %>
@@ -18,6 +18,5 @@
       <i class="fa fa-heart"></i>
       <% end %>
     <% end %>
-
   </div>
 </div>
