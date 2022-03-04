@@ -12,7 +12,6 @@ class ExperiencesController < ApplicationController
       @city = City.find_by(ref: params[:city])
       @experiences = @experiences.where(city: @city)
     end
-
     @markers = @experiences.geocoded.map do |experience|
       {
         lat: experience.latitude,

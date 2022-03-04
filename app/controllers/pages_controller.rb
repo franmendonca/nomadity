@@ -20,6 +20,14 @@ class PagesController < ApplicationController
 
     end
 
+      @markers = Experience.where(id: @all_favorites.map(&:id)).geocoded.map do |favorite|
+    {
+      lat: favorite.latitude,
+      lng: favorite.longitude,
+      image_url: helpers.asset_url("logo.jpg")
+    }
+  end
+
   end
 
 
