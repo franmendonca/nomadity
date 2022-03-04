@@ -19,7 +19,13 @@ class ExperiencesController < ApplicationController
         image_url: helpers.asset_url("logo.jpg")
       }
     end
+
+    @categories = Category.all
+    @categories = @categories.joins(experiences: :city).where(city: { ref: params[:city] }).distinct
+
   end
+
+
 
   def show
     @user = current_user
