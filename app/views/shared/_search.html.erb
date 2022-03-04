@@ -1,16 +1,6 @@
 <div class="search-form-control form-group">
-  <%= form_with url: categories_path, method: :get do |f| %>
-    <%= f.text_field :city,
-                      class: "form-control",
-                      placeholder: 'Type a city',
-                      value: params[:city]
-  %>
-  <button name="button" type="submit" class="btn btn-primary d-flex align-items-center"><i class="fas fa-search"></i>Search</button>
-  </div>
-<% end %>
-<%# <div class="search-form-control form-group">
-  <%= form_with model: @city, url: categories_path, method: :get do |f| %>
-    <%# <%= f.collection_select(:city_id, City.all, :id, :name) %>
-  <%# <button name="button" type="submit" class="btn btn-primary d-flex align-items-center"><i class="fas fa-search"></i>Search</button> %>
-  <%# </div> %>
-<%# <% end %>
+  <%= form_with url:categories_path, method: :get do |f| %>
+    <%= f.collection_select(:city, City.all, :ref, :name) %>
+    <%= f.submit "Choose your city", class: "btn btn-primary"%>
+  <% end %>
+</div>
