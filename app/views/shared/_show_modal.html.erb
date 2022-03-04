@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="experience<%= experience.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,6 +12,7 @@
           <p> <%= experience.description %></p>
           <p> <%= experience.category.name %></p>
           <p> <%= experience.city.name %></p>
+          <%= render 'shared/favorite_button', experience: experience %>
           <div>
           </div>
         </div>
