@@ -57,9 +57,8 @@ cities = City.all
 User.create!(
   username: "Pedro", email: "pedro@lewagon.com",
   password: "12345678",
-  biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Nulla rhoncus posuere dolor in condimentum. Quisque vel elementum eros, sed tincidunt tortor.
-  Pellentesque ac tortor elementum, iaculis elit quis, facilisis dui. Sed vitae mauris lacinia, luctus justo at, condimentum lacus."
+  biography: "I was born in London and moved to Tokyo, Japan when I was in elementary school. I’m 27, and am currently travelling around Europe,
+  working remotely as a web developer. I’m also starting a new video series Coding Demystified to inspire more people to code!"
 )
 puts "Created #{User.count} users"
 
