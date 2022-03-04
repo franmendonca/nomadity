@@ -10,51 +10,78 @@ category1 = Category.create(
   name: "Yoga Studios",
   ref: "yoga"
 )
+category1photo = URI.open("https://www.pinclipart.com/picdir/middle/169-1692394_yoga-modules-yoga-icon-clipart.png")
+category1.photo.attach(io: category1photo, filename: 'icon', content_type: 'image/png')
+
+category1.save
 category2 = Category.create(
   name: "Co-working",
   ref: "cowork"
 )
+category2photo = URI.open("https://pngset.com/images/coworking-space-icon-co-working-space-clipart-audience-crowd-speech-sitting-transparent-png-2670357.png")
+category2.photo.attach(io: category2photo, filename: 'icon', content_type: 'image/png')
+
+category2.save
 category3 = Category.create(
   name: "Grocery Shops",
   ref: "grocery"
 )
+category3photo = URI.open("https://en.pimg.jp/030/296/857/1/30296857.jpg")
+category3.photo.attach(io: category3photo, filename: 'icon', content_type: 'image/png')
+
+category3.save
 category4 = Category.create(
   name: "Gyms",
   ref: "gyms"
 )
+category4photo = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1uC4bSsVlEZIWnmeTRAx1m34QWHyanhLt0Y55jv3a1saAjgEAH6LE4QkyYMjtnNpzO9o&usqp=CAU")
+category4.photo.attach(io: category4photo, filename: 'icon', content_type: 'image/png')
+
+category4.save
 category5 = Category.create(
   name: "Cafes",
   ref: "cafes"
 )
+category5photo = URI.open("https://www.pngfind.com/pngs/m/65-653904_icono-cafe-png-cafe-icon-transparent-png.png")
+category5.photo.attach(io: category5photo, filename: 'icon', content_type: 'image/png')
+
+category5.save
+
 category6 = Category.create(
   name: "Co-living Spaces",
   ref: "coliving"
 )
+category6photo = URI.open("https://st2.depositphotos.com/28286440/45696/v/380/depositphotos_456964560-stock-illustration-living-icon-vector-logotype.jpg?forcejpeg=true")
+category6.photo.attach(io: category6photo, filename: 'icon', content_type: 'image/png')
 
+category6.save
 category7 = Category.create(
   name: "Nightlife",
   ref: "nightlife"
 )
+category7photo = URI.open("https://cdn-icons-png.flaticon.com/512/2038/2038336.png")
+category7.photo.attach(io: category7photo, filename: 'icon', content_type: 'image/png')
+
+category7.save
 
 category8 = Category.create(
   name: "Restaurants",
   ref: "restaurants"
 )
+category8photo = URI.open("https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png")
+category8.photo.attach(io: category8photo, filename: 'icon', content_type: 'image/png')
+
+category8.save
 puts "Created #{Category.count} categories"
 
 categories = Category.all
+
 city1 = City.create!(
   name: "Lisbon",
-  address: "PRAÇA DO MUNICÍPIO
-  1100-365 - LISBOA
-  Portugal",
-  latitude: 38.7084432500784, longitude: -9.139392688623499,
   ref: "lisbon"
 )
 city2 = City.create!(
   name: "Porto",
-  address: "R. Clube dos Fenianos 5, 4000-407 Porto",
-  latitude: 41.159251036303075, longitude: -8.629319827759867,
   ref: "porto"
 )
 puts "Created #{City.count} cities"
@@ -63,20 +90,17 @@ cities = City.all
 User.create!(
   username: "Pedro", email: "pedro@lewagon.com",
   password: "12345678",
-  biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Nulla rhoncus posuere dolor in condimentum. Quisque vel elementum eros, sed tincidunt tortor.
-  Pellentesque ac tortor elementum, iaculis elit quis, facilisis dui. Sed vitae mauris lacinia, luctus justo at, condimentum lacus."
+  biography: "I was born in London and moved to Tokyo, Japan when I was in elementary school. I’m 27, and am currently travelling around Europe,
+  working remotely as a web developer. I’m also starting a new video series Coding Demystified to inspire more people to code!"
 )
 puts "Created #{User.count} users"
 
 nola = Experience.create!(
   city: city2,
   category: category8,
-  name: "Nola Kitchen", address: "Praça Dona Filipa de Lencastre Nº25
-  4050-259 Porto",
+  name: "Nola Kitchen", address: "Praça Dona Filipa de Lencastre Nº25, 4050-259 Porto",
   description: "NOLA — stands for No Labels — is a new kitchen concept where real food comes first and people are united by a common belief: that real, healthy and tasty food makes us both healthier and happier.",
-  website_url: "https://www.nola.com.en",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://www.nola.com.en"
 )
 
 nphoto1 = URI.open("https://nola.com.pt/wp-content/uploads/2020/04/NOLA-SOBRE03.jpg")
@@ -94,11 +118,9 @@ nola.save
 early = Experience.create!(
   city: city2,
   category: category8,
-  name: "Early", address: "Praça Dona Filipa de Lencastre Nº25
-  4050-259 Porto",
+  name: "Early", address: "Praça Dona Filipa de Lencastre Nº25, 4050-259 Porto",
   description: "Patrícia and Emanuel, siblings, have come to give a breath of fresh air to the address of the old bookstore Contraste. On Rua dos Bragas, EARLY opens early and serves breakfast, brunch, lunch and snacks. The book-filled display was left behind but the idea that also resembles the world of reading is kept: life should be lived calmly, enjoyed with no rush and accompanied by a warm drink and a slice of homemade cake, just like a good book.",
-  website_url: "https://crucreativehub.com/en/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://crucreativehub.com/en/"
 )
 
 ephoto1 = URI.open("http://early.pt/images/LF_EARLY-109.JPG")
@@ -114,11 +136,9 @@ early.save
 cru = Experience.create!(
   city: city2,
   category: category2,
-  name: "Cru Creative Hub", address: "Rua do Rosário, 211
-    4050-524 Porto, Portugal",
+  name: "Cru Creative Hub", address: "Rua do Rosário, 211, 4050-524 Porto, Portugal",
   description: "Patrícia and Emanuel, siblings, have come to give a breath of fresh air to the address of the old bookstore Contraste. On Rua dos Bragas, EARLY opens early and serves breakfast, brunch, lunch and snacks. The book-filled display was left behind but the idea that also resembles the world of reading is kept: life should be lived calmly, enjoyed with no rush and accompanied by a warm drink and a slice of homemade cake, just like a good book.",
-  website_url: "https://crucreativehub.com/en/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://crucreativehub.com/en/"
 )
 
 cphoto1 = URI.open("https://media.timeout.com/images/105816387/750/422/image.jpg")
@@ -136,8 +156,7 @@ selina = Experience.create!(
   category: category2,
   name: "Selina Navi", address: "Rua Das Oliveiras nº 61, 4050-449 Porto, Portugal",
   description: "Get sh*t done at our urban coworking space in Porto, Portugal! Count on fast and reliable Wi-Fi, meeting rooms, and additional facilities to stay productive alongside a vibrant community of locals and nomads.",
-  website_url: "https://www.selina.com/portugal/porto/",
-  latitude: Faker::Address.latitude, longitude: Faker::Address.longitude
+  website_url: "https://www.selina.com/portugal/porto/"
 )
 
 sphoto1 = URI.open("https://coworker.imgix.net/photos/portugal/porto/selina-navis/2-1643203649.jpg?w=1200&h=0&q=90&auto=format,compress&fit=crop&mark=/template/img/wm_icon.png&markscale=5&markalign=center,middle")
@@ -152,16 +171,16 @@ selina.save
 
 latitudep = rand(41.14..41.17)
 longitudep = rand(-8.69..-8.59)
-latitudel = rand(38.69..41.17)
+latitudel = rand(38.69..38.80)
 longitudel = rand(-9.30..-9.10)
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   yoga1 = Experience.create!(
     city: city1,
     category: category1,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -178,13 +197,13 @@ longitudel = rand(-9.30..-9.10)
   yoga1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   yoga2 = Experience.create!(
     city: city2,
     category: category1,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -201,13 +220,13 @@ end
   yoga2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cowork1 = Experience.create!(
     city: city1,
     category: category2,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -224,13 +243,13 @@ end
   cowork1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   cowork2 = Experience.create!(
     city: city2,
     category: category2,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -247,13 +266,13 @@ end
   cowork2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   grocery1 = Experience.create!(
     city: city1,
     category: category3,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -270,13 +289,13 @@ end
   grocery1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   grocery2 = Experience.create!(
     city: city2,
     category: category3,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -293,13 +312,13 @@ end
   grocery2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   gym1 = Experience.create!(
     city: city1,
     category: category4,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -316,13 +335,13 @@ end
   gym1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   gym2 = Experience.create!(
     city: city2,
     category: category4,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -339,13 +358,13 @@ end
   gym2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   cafe1 = Experience.create!(
     city: city1,
     category: category5,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -362,13 +381,13 @@ end
   cafe1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   cafe2 = Experience.create!(
     city: city2,
     category: category5,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -385,13 +404,13 @@ end
   cafe2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   coliving1 = Experience.create!(
     city: city1,
     category: category6,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -408,13 +427,13 @@ end
   coliving1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   coliving2 = Experience.create!(
     city: city2,
     category: category6,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -431,13 +450,13 @@ end
   coliving2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   night1 = Experience.create!(
     city: city1,
     category: category7,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -454,13 +473,13 @@ end
   night1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   night2 = Experience.create!(
     city: city2,
     category: category7,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep
@@ -477,13 +496,13 @@ end
   night2.save
 end
 
-2.times do
-  latitudel = rand(38.69..41.17)
+5.times do
+  latitudel = rand(38.69..38.80)
   longitudel = rand(-9.30..-9.10)
   restaurant1 = Experience.create!(
     city: city1,
     category: category8,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudel, longitude: longitudel
@@ -500,13 +519,13 @@ end
   restaurant1.save
 end
 
-2.times do
+5.times do
   latitudep = rand(41.14..41.17)
   longitudep = rand(-8.69..-8.59)
   restaurant2 = Experience.create!(
     city: city2,
     category: category8,
-    name: Faker::Company.name, address: Faker::Address.street_name,
+    name: Faker::Company.name,
     description: Faker::Lorem.sentence(word_count: 10),
     website_url: "www.#{Faker::Company.name}.com",
     latitude: latitudep, longitude: longitudep

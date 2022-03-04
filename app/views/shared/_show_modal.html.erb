@@ -1,0 +1,29 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> <%= experience.name %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class= "d-flex">
+      <div class="modal-img" style="background-image: url(https://images.unsplash.com/photo-1596457596405-2c3ea4502d67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);">
+      </div>
+        <div class="modal-body">
+          <p> <%= experience.description %></p>
+          <p> <%= experience.category.name %></p>
+          <p> <%= experience.city.name %></p>
+          <% if !current_user.favorited?(experience)%>
+            <%= link_to "Favorite", experience_favorites_path(experience), method: :post, class: "btn btn-primary" %>
+          <% else %>
+            <%= link_to "Unfavorite", experience_delete_favorites_path(experience), method: :post, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
