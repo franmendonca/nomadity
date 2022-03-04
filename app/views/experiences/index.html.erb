@@ -1,15 +1,19 @@
 <div class="container">
-  <div class="d-flex justify-content-center">
-    <div class="container">
+  <div class="row">
+    <div class="col-6">
       <%= render "shared/mapbox" %>
     </div>
-    <div class="container">
+    <div class="col-6">
+     <div class="scrollmenu">
+            <% @categories.each do |category| %>
+            <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
+            <% end %>
+      </div>
       <% @experiences.each do |experience| %>
       <%= render 'shared/experience_card', experience: experience %>
       <%= render 'shared/show_modal', experience: experience %>
-
       <% end %>
     </div>
       <%#= link_to "Home", root_path, class: "btn btn-primary" %>
-  </div>
+   </div>
 </div>
