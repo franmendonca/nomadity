@@ -6,10 +6,13 @@
         <% @categories.each do |category| %>
           <div class="grid-item">
             <h2> <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %> </h2>
-            <%= cl_image_tag(category.photo.key) if category.photo.key.present? %>
+            <%= cl_image_tag(category.photo.key, :class=>"icon")  if category.photo.key.present? %>
           </div>
         <br>
         <br>
         <br>
         <% end %>
       </div>
+    <br>
+  <br>
+<br>
