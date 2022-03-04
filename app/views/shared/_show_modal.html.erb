@@ -12,11 +12,8 @@
           <p> <%= experience.description %></p>
           <p> <%= experience.category.name %></p>
           <p> <%= experience.city.name %></p>
-          <% if !current_user.favorited?(experience)%>
-            <%= link_to "Favorite", experience_favorites_path(experience), method: :post, class: "btn btn-primary" %>
-          <% else %>
-            <%= link_to "Unfavorite", experience_delete_favorites_path(experience), method: :post, class: "btn btn-primary" %>
-          <% end %>
+          <div>
+          </div>
         </div>
       </div>
 
