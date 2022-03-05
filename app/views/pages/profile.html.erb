@@ -1,10 +1,10 @@
-<div class="container">
-  <div class="row">
-   <div class="col-2 m-3">
+<div class="profile-container">
+  <div class=" d-flex  justify-content-between m-6">
+   <div class="col-2">
     <%= render "shared/profile_sidebar" %>
    </div>
    <br>
-   <div class="col-5 mt-3">
+   <div class="col-5 m-3">
       <div class="d-flex">
         <h2>Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
@@ -14,7 +14,7 @@
       <%= render 'shared/show_modal', experience: favorite %>
     <% end %>
    </div>
-      <div class="col-4 mt-3">
+      <div class="col-5 m-3">
         <%= render "shared/mapbox" %>
       </div>
   </div>
