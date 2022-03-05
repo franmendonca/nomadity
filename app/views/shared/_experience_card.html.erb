@@ -1,4 +1,7 @@
 <div class="card-experience mt-3 mb-3">
+  <div class="favorite-button">
+    <%= render 'shared/favorite_button', experience: experience %>
+  </div>
   <% if experience.photos.attached? %>
     <%= cl_image_tag experience.photos.sample.key, crop: :fill %>
   <% end %>
@@ -8,6 +11,5 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experience<%= experience.id %>">
   Show
 </button>
-    <%= render 'shared/favorite_button', experience: experience %>
   </div>
 </div>

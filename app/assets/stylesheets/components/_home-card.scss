@@ -48,8 +48,9 @@
     transition: 0.3s all ease-in-out;
     &:hover{
       margin-top:-8px;
-      background-color: #e7e6e6;;
+      background: #666;
       transition: 0.5s;
+      color: white;
     }
   }
   &__header {

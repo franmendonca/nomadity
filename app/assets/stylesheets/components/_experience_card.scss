@@ -6,28 +6,35 @@
   display: flex;
   align-items: center;
   border-radius: 25px;
-}
+  position: relative;
 
-.card-experience img {
-  height: 100%;
-  width: 150px;
-  object-fit: cover;
-}
+  img {
+    height: 100%;
+    width: 150px;
+    object-fit: cover;
+  }
 
-.card-experience h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.card-experience p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
 
-.card-experience .card-experience-infos {
-  padding: 16px;
+  .card-experience-infos {
+    padding: 16px;
+  }
+
+  .favorite-button{
+    position: absolute;
+    left: 585px;
+    bottom: 125px;
+  }
 }
