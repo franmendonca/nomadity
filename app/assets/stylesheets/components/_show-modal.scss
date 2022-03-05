@@ -1,12 +1,32 @@
 .modal-content{
   padding: 20px;
+  border-radius: 25px;
+
+  .btn-light{
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 1px solid black;
+    box-shadow: 0 4px 2px -2px gray;
+    .fa-arrow-left{
+      color: $orange;
+    }
+  }
+  .btn-light:hover{
+    background-color: #e7e6e6;
+    transition: 0.3s;
+  }
 }
 
 .modal-img{
-  width: 500px;
+  width: 50%;
   height: 350px;
   background-size: cover;
   background-position: center;
   margin: 10px;
 
+}
+
+.modal-body{
+  width:50%;
 }

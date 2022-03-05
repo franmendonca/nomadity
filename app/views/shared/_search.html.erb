@@ -1,6 +1,12 @@
-<div class="search-form-control form-group">
+<div class="form-group">
   <%= form_with url:categories_path, method: :get do |f| %>
-    <%= f.collection_select(:city, City.all, :ref, :name) %>
-    <%= f.submit "Choose your city", class: "btn btn-primary"%>
+    <div class="search-form-control">
+      <div>
+        <%= f.collection_select(:city, City.all, :ref, :name, options = {:prompt => 'Choose a City'}, {class: 'search-form'})%>
+      </div>
+      <div>
+        <%= f.submit "Let's start!", class: "btn btn-primary"%>
+      </div>
+    </div>
   <% end %>
 </div>
