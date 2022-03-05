@@ -3,17 +3,19 @@
     <div class="col-6">
       <%= render "shared/mapbox" %>
     </div>
-    <div class="col-6">
-     <div class="scrollmenu">
-            <% @categories.each do |category| %>
-            <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
-            <% end %>
+    <div class="col-6 scroll">
+      <div class="scrollmenu">
+        <% @categories.each do |category| %>
+          <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
+        <% end %>
       </div>
-      <% @experiences.each do |experience| %>
-      <%= render 'shared/experience_card', experience: experience %>
-      <%= render 'shared/show_modal', experience: experience %>
-      <% end %>
+      <div class= "bottom-shadow">
+        <% @experiences.each do |experience| %>
+          <%= render 'shared/experience_card', experience: experience %>
+          <%= render 'shared/show_modal', experience: experience %>
+        <% end %>
+      </div>
     </div>
       <%#= link_to "Home", root_path, class: "btn btn-primary" %>
-   </div>
+  </div>
 </div>
