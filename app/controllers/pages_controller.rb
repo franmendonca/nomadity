@@ -24,7 +24,8 @@ class PagesController < ApplicationController
     {
       lat: favorite.latitude,
       lng: favorite.longitude,
-      image_url: helpers.asset_url("logo.jpg")
+      image_url: helpers.asset_url("logo.jpg"),
+      info_window: render_to_string(partial: "shared/info_window", locals: { experience: favorite })
     }
   end
 
