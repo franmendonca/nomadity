@@ -8,6 +8,7 @@
   <div class="card-experience-infos">
     <h2><%= experience.name %></h2>
     <p><%= experience.address %></p>
+    <%= render 'shared/favorite_button', experience: experience %>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experience<%= experience.id %>">
   Show
 </button>
