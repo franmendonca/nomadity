@@ -12,11 +12,13 @@ class ExperiencesController < ApplicationController
       @city = City.find_by(ref: params[:city])
       @experiences = @experiences.where(city: @city)
     end
+
     @markers = @experiences.geocoded.map do |experience|
       {
         lat: experience.latitude,
         lng: experience.longitude,
-        image_url: helpers.asset_url("logo.jpg")
+        image_url: helpers.asset_url("logo.jpg"),
+        info_window: render_to_string(partial: "shared/info_window", locals: { experience: experience })
       }
     end
 
