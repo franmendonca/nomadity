@@ -6,8 +6,7 @@ export default class extends Controller {
   static values = {url: String, verb: String}
 
   connect() {
-    console.log("I've connected to a heart")
-    console.log(this.buttonTarget)
+
   }
 
   send() {

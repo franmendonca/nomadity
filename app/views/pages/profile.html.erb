@@ -9,10 +9,12 @@
         <h2>Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
       </div>
-    <% @all_favorites.each do |favorite| %>
-      <%= render 'shared/experience_card', experience: favorite %>
-      <%= render 'shared/show_modal', experience: favorite, category: favorite %>
-    <% end %>
+      <div data-controller="drag">
+        <% @all_favorites.each do |favorite| %>
+          <%= render 'shared/experience_card', experience: favorite %>
+          <%= render 'shared/show_modal', experience: favorite %>
+        <% end %>
+      </div>
    </div>
       <div class="col-5 m-3">
         <%= render "shared/mapbox" %>
