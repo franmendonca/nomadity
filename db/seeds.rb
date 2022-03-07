@@ -10,40 +10,40 @@ category1 = Category.create(
   name: "Yoga Studios",
   ref: "yoga"
 )
-category1photo = URI.open("https://cdn-icons-png.flaticon.com/512/186/186846.png")
-category1.photo.attach(io: category1photo, filename: 'icon', content_type: 'image/png')
+category1photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_yoga_-248-n_1_yydoiw.svg")
+category1.photo.attach(io: category1photo, filename: 'icon1', content_type: 'image/svg')
 
 category1.save
 category2 = Category.create(
   name: "Co-working",
   ref: "cowork"
 )
-category2photo = URI.open("https://cdn-icons.flaticon.com/png/512/1357/premium/1357622.png?token=exp=1646653774~hmac=4bfafe30609ec5d77106036764c67b3d")
-category2.photo.attach(io: category2photo, filename: 'icon', content_type: 'image/png')
+category2photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_shared_workspace_re_3gsu_gn2me7.svg")
+category2.photo.attach(io: category2photo, filename: 'icon2', content_type: 'image/svg')
 
 category2.save
 category3 = Category.create(
   name: "Grocery Shops",
   ref: "grocery"
 )
-category3photo = URI.open("https://cdn-icons-png.flaticon.com/512/579/579427.png")
-category3.photo.attach(io: category3photo, filename: 'icon', content_type: 'image/png')
+category3photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665175/undraw_shopping_app_flsj_zstypw.svg")
+category3.photo.attach(io: category3photo, filename: 'icon3', content_type: 'image/svg')
 
 category3.save
 category4 = Category.create(
   name: "Gyms",
   ref: "gyms"
 )
-category4photo = URI.open("https://cdn-icons-png.flaticon.com/512/2936/2936886.png")
-category4.photo.attach(io: category4photo, filename: 'icon', content_type: 'image/png')
+category4photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665146/undraw_personal_trainer_ote3_bapr18.svg")
+category4.photo.attach(io: category4photo, filename: 'icon4', content_type: 'image/svg')
 
 category4.save
 category5 = Category.create(
   name: "Cafes",
   ref: "cafes"
 )
-category5photo = URI.open("https://cdn-icons-png.flaticon.com/512/3232/3232426.png")
-category5.photo.attach(io: category5photo, filename: 'icon', content_type: 'image/png')
+category5photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_coffee_re_x35h_v8e28j.svg")
+category5.photo.attach(io: category5photo, filename: 'icon5', content_type: 'image/svg')
 
 category5.save
 
@@ -51,16 +51,16 @@ category6 = Category.create(
   name: "Co-living Spaces",
   ref: "coliving"
 )
-category6photo = URI.open("https://st2.depositphotos.com/5394392/11923/v/450/depositphotos_119236694-stock-illustration-friends-icon-group-of-people.jpg")
-category6.photo.attach(io: category6photo, filename: 'icon', content_type: 'image/png')
+category6photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_building_re_xfcm_arfxpa.svg")
+category6.photo.attach(io: category6photo, filename: 'icon6', content_type: 'image/svg')
 
 category6.save
 category7 = Category.create(
   name: "Nightlife",
   ref: "nightlife"
 )
-category7photo = URI.open("https://cdn-icons.flaticon.com/png/512/281/premium/281462.png?token=exp=1646654123~hmac=da254bede7cd3b5b27dc97bef9d49ceb")
-category7.photo.attach(io: category7photo, filename: 'icon', content_type: 'image/png')
+category7photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_wine_tasting_-30-vw_vxyh9r.svg")
+category7.photo.attach(io: category7photo, filename: 'icon7', content_type: 'image/svg')
 
 category7.save
 
@@ -68,8 +68,8 @@ category8 = Category.create(
   name: "Restaurants",
   ref: "restaurants"
 )
-category8photo = URI.open("https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png")
-category8.photo.attach(io: category8photo, filename: 'icon', content_type: 'image/png')
+category8photo = URI.open("https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_chef_cu-0-r_sa2zou.svg")
+category8.photo.attach(io: category8photo, filename: 'icon8', content_type: 'image/svg')
 
 category8.save
 puts "Created #{Category.count} categories"
@@ -140,6 +140,24 @@ nola.photos.attach(io: nphoto4, filename: 'NOLA-4_e5rpxq.png', content_type: 'im
 
 nola.save
 
+manna = Experience.create!(
+  city: city2,
+  category: category8,
+  name: "Manna", address: "Rua da Conceição 60, 4050-213 Porto",
+  description: "Relaxed vegetarian cafe turning out smoothie bowls & vegan pancakes, plus coffee, beer & wine.",
+  website_url: "https://www.mannaporto.com"
+)
+
+mannaphoto1 = URI.open("https://images.squarespace-cdn.com/content/v1/5cf383f1f561ca00012d40b8/1585218856326-WSVKGW4EDJIFJ94RIK6R/79602674_102693371201355_248650323086970836_n.jpg?format=2500w")
+mannaphoto2 = URI.open("https://images.squarespace-cdn.com/content/v1/5cf383f1f561ca00012d40b8/1585218873482-UBEB1NVZCVIKVWFUJFZC/78972638_559175451582470_8430529983800365225_n.jpg?format=1000w")
+mannaphoto3 = URI.open("https://images.squarespace-cdn.com/content/v1/5cf383f1f561ca00012d40b8/1585218865924-AUA2YEJKRGZMX4UTU373/75266945_416564795891392_8213882220683321327_n.jpg?format=1500w")
+
+manna.photos.attach(io: mannaphoto1, filename: 'manna1', content_type: 'image/jpg')
+manna.photos.attach(io: mannaphoto2, filename: 'manna2', content_type: 'image/jpg')
+manna.photos.attach(io: mannaphoto3, filename: 'manna3', content_type: 'image/jpg')
+
+manna.save
+
 early = Experience.create!(
   city: city2,
   category: category8,
@@ -193,6 +211,78 @@ selina.photos.attach(io: sphoto2, filename: 'selina2', content_type: 'image/jpg'
 selina.photos.attach(io: sphoto3, filename: 'selina3', content_type: 'image/jpg')
 
 selina.save
+
+io = Experience.create!(
+  city: city2,
+  category: category2,
+  name: "Porto i/o Downtown", address: "R. de Cândido dos Reis 81, 4050-152 Porto",
+  description: "We are Porto i/o, the biggest coworking spaces of our beautiful city and home for local tech and creative community since 2014.
+  We are happy to make of our homes the beating heart of all things beautiful and digital in Porto, while always focusing on people.",
+  website_url: "https://www.porto.io/"
+)
+
+iophoto1 = URI.open("https://porto.io/media/uploads/os6.png")
+iophoto2 = URI.open("https://coworker.imgix.net/photos/portugal/matosinhos/porto-i-o-seaside/main-1573663084.png?w=1200&h=630&q=90&auto=format,compress&fit=crop&mark=/template/img/wm_icon.png&markscale=5&markalign=center,middle")
+
+io.photos.attach(io: iophoto1, filename: 'io1', content_type: 'image/png')
+io.photos.attach(io: iophoto2, filename: 'io2', content_type: 'image/png')
+
+io.save
+
+lotus = Experience.create!(
+  city: city2,
+  category: category1,
+  name: "Lotus Yoga Studio", address: "Rua do Carvalho 102U Foz do Douro 4150-192 Porto, Portugal",
+  description: "We believe there is something great and unique in every being.
+
+  Our mission is to help you awaken this inner power.
+
+  We are a Yoga Studio in Oporto, Portugal.",
+  website_url: "https://lotus.pt/en/homepage/"
+)
+
+lotusphoto1 = URI.open("https://lotus.pt/wp-content/uploads/2021/07/lotus-7a-scaled.jpg")
+lotusphoto2 = URI.open("https://media.timeout.com/images/105375372/image.jpg")
+
+lotus.photos.attach(io: lotusphoto1, filename: 'lotus1', content_type: 'image/jpg')
+lotus.photos.attach(io: lotusphoto2, filename: 'lotus2', content_type: 'image/jpg')
+
+lotus.save
+
+fly = Experience.create!(
+  city: city2,
+  category: category1,
+  name: "Lotus Yoga Studio", address: "Rua de Santo Ildefonso 366, 1dt ft.
+  4000-222 Porto
+  Portugal",
+  description: "My studio was made with the desire to create something new, something that was lacking in this city, a vision of a welcoming and modern space to bring together people who want to learn, evolve, and have a creative life. It's not just yoga and exercise that we're talking about here.",
+  website_url: "https://www.studiofly.pt/"
+)
+
+flyphoto1 = URI.open("https://cdn.happeningnext.com/events10/banners/d92eea572b1f90fac0dd8500b6a64436d0a1add863a42ec26cc81499b1c3cdf9-rimg-w525-h350-gmir.jpg?v=1623991587")
+flyphoto2 = URI.open("http://3.bp.blogspot.com/-GRR5q5tFnqE/VrILo5A9dbI/AAAAAAABq2M/vgwwN2gZZKA/s1600/IMG_3350.jpg")
+
+fly.photos.attach(io: flyphoto1, filename: 'fly1', content_type: 'image/jpg')
+fly.photos.attach(io: flyphoto2, filename: 'fly2', content_type: 'image/jpg')
+
+fly.save
+
+hotpod = Experience.create!(
+  city: city2,
+  category: category1,
+  name: "Lotus Yoga Studio", address: "Av. Comendador Ferreira de Matos 688 Matosinhos, Porto, PT, 4450-121, PT",
+  description: "We are Europes largest yoga business. Since 2013, over 100,000 people have immersed themselves in a Hotpod class at one of our 50+ locations around the world.
+  We first landed in Porto in 2019.",
+  website_url: "https://hotpodyoga.com/studios/porto/"
+)
+
+hotpodphoto1 = URI.open("https://cdn.hotpodyoga.com/app/uploads/2018/11/05143846/Inpod-Images-January-2020-Hero-Low-Res-004-960x540.jpg")
+hotpodphoto2 = URI.open("https://cdn.hotpodyoga.com/app/uploads/2018/11/13133845/HPY_JULY_2020_Still39-960x540.jpg")
+
+hotpod.photos.attach(io: hotpodphoto1, filename: 'pod1', content_type: 'image/jpg')
+hotpod.photos.attach(io: hotpodphoto2, filename: 'pod2', content_type: 'image/jpg')
+
+hotpod.save
 
 latitudep = rand(41.14..41.17)
 longitudep = rand(-8.69..-8.59)
