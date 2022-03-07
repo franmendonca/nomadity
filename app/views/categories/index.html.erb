@@ -3,7 +3,7 @@
   <div class="grid">
     <% @categories.each do |category| %>
       <div class="grid-item">
-        <%= cl_image_tag(category.photo.key, :class=>"icon")  if category.photo.key.present? %>
+        <%= link_to (cl_image_tag(category.photo.key, :class=>"icon")  if category.photo.key.present?),  experiences_path(category: category.ref, city: params[:city]) %>
         <h2> <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %> </h2>
       </div>
     <% end %>

@@ -10,7 +10,7 @@ category1 = Category.create(
   name: "Yoga Studios",
   ref: "yoga"
 )
-category1photo = URI.open("https://www.pinclipart.com/picdir/middle/169-1692394_yoga-modules-yoga-icon-clipart.png")
+category1photo = URI.open("https://cdn-icons-png.flaticon.com/512/186/186846.png")
 category1.photo.attach(io: category1photo, filename: 'icon', content_type: 'image/png')
 
 category1.save
@@ -18,7 +18,7 @@ category2 = Category.create(
   name: "Co-working",
   ref: "cowork"
 )
-category2photo = URI.open("https://pngset.com/images/coworking-space-icon-co-working-space-clipart-audience-crowd-speech-sitting-transparent-png-2670357.png")
+category2photo = URI.open("https://cdn-icons.flaticon.com/png/512/1357/premium/1357622.png?token=exp=1646653774~hmac=4bfafe30609ec5d77106036764c67b3d")
 category2.photo.attach(io: category2photo, filename: 'icon', content_type: 'image/png')
 
 category2.save
@@ -26,7 +26,7 @@ category3 = Category.create(
   name: "Grocery Shops",
   ref: "grocery"
 )
-category3photo = URI.open("https://en.pimg.jp/030/296/857/1/30296857.jpg")
+category3photo = URI.open("https://cdn-icons-png.flaticon.com/512/579/579427.png")
 category3.photo.attach(io: category3photo, filename: 'icon', content_type: 'image/png')
 
 category3.save
@@ -34,7 +34,7 @@ category4 = Category.create(
   name: "Gyms",
   ref: "gyms"
 )
-category4photo = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1uC4bSsVlEZIWnmeTRAx1m34QWHyanhLt0Y55jv3a1saAjgEAH6LE4QkyYMjtnNpzO9o&usqp=CAU")
+category4photo = URI.open("https://cdn-icons-png.flaticon.com/512/2936/2936886.png")
 category4.photo.attach(io: category4photo, filename: 'icon', content_type: 'image/png')
 
 category4.save
@@ -42,7 +42,7 @@ category5 = Category.create(
   name: "Cafes",
   ref: "cafes"
 )
-category5photo = URI.open("https://www.pngfind.com/pngs/m/65-653904_icono-cafe-png-cafe-icon-transparent-png.png")
+category5photo = URI.open("https://cdn-icons-png.flaticon.com/512/3232/3232426.png")
 category5.photo.attach(io: category5photo, filename: 'icon', content_type: 'image/png')
 
 category5.save
@@ -51,7 +51,7 @@ category6 = Category.create(
   name: "Co-living Spaces",
   ref: "coliving"
 )
-category6photo = URI.open("https://st2.depositphotos.com/28286440/45696/v/380/depositphotos_456964560-stock-illustration-living-icon-vector-logotype.jpg?forcejpeg=true")
+category6photo = URI.open("https://st2.depositphotos.com/5394392/11923/v/450/depositphotos_119236694-stock-illustration-friends-icon-group-of-people.jpg")
 category6.photo.attach(io: category6photo, filename: 'icon', content_type: 'image/png')
 
 category6.save
@@ -59,7 +59,7 @@ category7 = Category.create(
   name: "Nightlife",
   ref: "nightlife"
 )
-category7photo = URI.open("https://cdn-icons-png.flaticon.com/512/2038/2038336.png")
+category7photo = URI.open("https://cdn-icons.flaticon.com/png/512/281/premium/281462.png?token=exp=1646654123~hmac=da254bede7cd3b5b27dc97bef9d49ceb")
 category7.photo.attach(io: category7photo, filename: 'icon', content_type: 'image/png')
 
 category7.save
