@@ -11,7 +11,7 @@
       </div>
     <% @all_favorites.each do |favorite| %>
       <%= render 'shared/experience_card', experience: favorite %>
-      <%= render 'shared/show_modal', experience: favorite %>
+      <%= render 'shared/show_modal', experience: favorite, category: favorite %>
     <% end %>
    </div>
       <div class="col-5 m-3">
