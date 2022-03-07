@@ -170,9 +170,9 @@ ephoto1 = URI.open("http://early.pt/images/LF_EARLY-109.JPG")
 ephoto2 = URI.open("http://early.pt/images/LF_EARLY.jpg")
 ephoto3 = URI.open("http://early.pt/images/LF_EARLY-78.JPG")
 
-early.photos.attach(io: ephoto1, filename: 'LF_EARLY-109.JPG', content_type: 'image/jpg')
-early.photos.attach(io: ephoto2, filename: 'LF_EARLY.jpg', content_type: 'image/jpg')
-early.photos.attach(io: ephoto3, filename: 'LF_EARLY-78.JPG', content_type: 'image/jpg')
+early.photos.attach(io: ephoto1, filename: 'early1', content_type: 'image/jpg')
+early.photos.attach(io: ephoto2, filename: 'early2', content_type: 'image/jpg')
+early.photos.attach(io: ephoto3, filename: 'early3', content_type: 'image/jpg')
 
 early.save
 
@@ -252,7 +252,7 @@ lotus.save
 fly = Experience.create!(
   city: city2,
   category: category1,
-  name: "Lotus Yoga Studio", address: "Rua de Santo Ildefonso 366, 1dt ft.
+  name: "Studio Fly Porto", address: "Rua de Santo Ildefonso 366, 1dt ft.
   4000-222 Porto
   Portugal",
   description: "My studio was made with the desire to create something new, something that was lacking in this city, a vision of a welcoming and modern space to bring together people who want to learn, evolve, and have a creative life. It's not just yoga and exercise that we're talking about here.",
@@ -270,7 +270,7 @@ fly.save
 hotpod = Experience.create!(
   city: city2,
   category: category1,
-  name: "Lotus Yoga Studio", address: "Av. Comendador Ferreira de Matos 688 Matosinhos, Porto, PT, 4450-121, PT",
+  name: "Hot Pod Yoga", address: "Av. Comendador Ferreira de Matos 688 Matosinhos, Porto, PT, 4450-121, PT",
   description: "We are Europes largest yoga business. Since 2013, over 100,000 people have immersed themselves in a Hotpod class at one of our 50+ locations around the world.
   We first landed in Porto in 2019.",
   website_url: "https://hotpodyoga.com/studios/porto/"
