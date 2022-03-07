@@ -7,10 +7,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="form-group">
-      <%= form_with url:categories_path, method: :get do |f| %>
+      <%= form_with url:experiences_path(city: params[:city]), method: :get do |f| %>
         <div class="search-form-control">
           <div>
-            <%= f.collection_select(:city, City.all, :ref, :name, options = {:prompt => 'Choose a City'}, {class: 'search-form'})%>
+            <%= f.collection_select(:city, City.all, :ref, :name, options = {:prompt => 'Choose a City'}, {class: 'search-form'}, {onchange: 'this.form.submit();'})%>
           </div>
           <div>
             <%= f.submit "Let's start!", class: "btn btn-primary"%>
