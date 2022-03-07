@@ -30,29 +30,29 @@ export default class extends Controller {
       let url;
       console.log(marker)
       if (marker.category == "yoga") {
-        url="https://cdn-icons-png.flaticon.com/512/186/186846.png"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_yoga_-248-n_1_yydoiw.svg"
 
       }
       else if (marker.category == "cowork") {
-        url="https://cdn-icons.flaticon.com/png/512/1357/premium/1357622.png?token=exp=1646653774~hmac=4bfafe30609ec5d77106036764c67b3d"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_shared_workspace_re_3gsu_gn2me7.svg"
       }
       else if (marker.category == "grocery") {
-        url="https://cdn-icons-png.flaticon.com/512/579/579427.png"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665175/undraw_shopping_app_flsj_zstypw.svg"
       }
       else if (marker.category == "gyms") {
-        url="https://cdn-icons-png.flaticon.com/512/2936/2936886.png"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665146/undraw_personal_trainer_ote3_bapr18.svg"
       }
       else if (marker.category == "cafes") {
-        url="https://cdn-icons-png.flaticon.com/512/3232/3232426.png"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_coffee_re_x35h_v8e28j.svg"
       }
       else if (marker.category == "coliving") {
-        url="https://st2.depositphotos.com/5394392/11923/v/450/depositphotos_119236694-stock-illustration-friends-icon-group-of-people.jpg"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_building_re_xfcm_arfxpa.svg"
       }
       else if (marker.category == "nightlife") {
-        url="https://cdn-icons.flaticon.com/png/512/281/premium/281462.png?token=exp=1646654123~hmac=da254bede7cd3b5b27dc97bef9d49ceb"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_wine_tasting_-30-vw_vxyh9r.svg"
       }
       else if (marker.category == "restaurants") {
-        url="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/eat-circle-orange-512.png"
+        url="https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_chef_cu-0-r_sa2zou.svg"
       }
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
