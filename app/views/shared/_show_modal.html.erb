@@ -4,7 +4,7 @@
       <div class="modal-header">
       <div class= "d-flex align-items-center">
         <h5 class="modal-title" id="exampleModalLabel"> <%= experience.name %></h5>
-        <%= cl_image_tag(@category.photo.key, :class=>"icon")  if @category.photo.key.present? %>
+        <%= cl_image_tag(experience.category.photo.key, :class=>"icon") if experience.category.photo.key.present? %>
       </div>
       </div>
       <%# <div class= "d-flex"> %>
@@ -40,6 +40,7 @@
             <p> Description: <%= experience.description %></p>
             <p> Category: <%= experience.category.name %></p>
             <p> City: <%= experience.city.name %></p>
+            <a href= <%=experience.website_url %>></a>
             <p> Address: <%= experience.address %></p>
           </div>
         </div>
