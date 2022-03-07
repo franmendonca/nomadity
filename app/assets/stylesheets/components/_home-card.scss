@@ -7,7 +7,6 @@
 }
 .home-cards{
   width:100%;
-  height:50vh;
     h3{
       padding: 5px 0px;
       font-weight: bolder;
@@ -24,10 +23,10 @@
 .card {
   width: 60%;
   height: 80%;
-  max-height: 350px;
   padding: auto;
   text-align: center;
   border: none;
+  margin: 20px 0;
   &__container {
     display: grid;
     width:100%;
@@ -57,5 +56,59 @@
     text-transform: uppercase;
     font-size: 16px;
     margin: 8px auto;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+
+  .card {
+    min-height: 40vh;
+    &__container{
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  .card {
+    min-height: 40vh;
+    &__container{
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  .card {
+    min-height: 50vh;
+    &__container{
+      grid-template-columns: 1fr 1fr;
+
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .card {
+    &__container{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  .card {
+    &__container{
+      grid-template-columns: 1fr 1fr 1fr;
+      min-height: 50vh;
+    }
   }
 }

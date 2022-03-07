@@ -9,7 +9,6 @@ class FavoritesController < ApplicationController
     end
   end
 
-
   def destroy
     experience = Experience.find(params[:id])
     current_user.unfavorite(experience)
