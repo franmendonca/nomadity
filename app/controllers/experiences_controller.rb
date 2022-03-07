@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
       {
         lat: experience.latitude,
         lng: experience.longitude,
-        image_url: helpers.asset_url("logo.jpg"),
+        category: @category.ref,
         info_window: render_to_string(partial: "shared/info_window", locals: { experience: experience })
       }
     end
