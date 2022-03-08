@@ -2,3 +2,15 @@
   width: 110%;
 
 }
+
+.map {
+  position: relative;
+  z-index: 1;
+}
+
+.directions {
+  position: relative;
+  z-index: 2;
+  top: -540px;
+  right: -80px;
+}
