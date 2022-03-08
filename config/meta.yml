@@ -1,0 +1,5 @@
+meta_product_name: "Nomadity"
+meta_title: "Nomadity - Nomad life made easy!"
+meta_description: "Changing city often? Plan your routines, one city at a time."
+meta_image: "background.jpg" # should exist in `app/assets/images/`
+#twitter_account: "@product_twitter_account"   # required for Twitter Cards
