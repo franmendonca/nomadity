@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container" data-controller="drag">
 <br>
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
@@ -14,7 +14,7 @@
         <h2>Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
       </div>
-      <div data-controller="drag">
+      <div data-drag-target="cards">
         <% @all_favorites.each do |favorite| %>
           <%= render 'shared/experience_card', experience: favorite %>
           <%= render 'shared/show_modal', experience: favorite %>
@@ -25,4 +25,6 @@
         <%= render "shared/mapbox" %>
       </div>
   </div>
+  <button data-action="click->drag#send"> LETS go</button>
+
 </div>
