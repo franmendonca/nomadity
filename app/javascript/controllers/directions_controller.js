@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
-
 export default class extends Controller {
   static values = {
     apiKey: String,
@@ -85,17 +84,29 @@ export default class extends Controller {
 
   #getDirections(){
     const start = [ this.markersValue[0].lng,this.markersValue[0].lat ];
-    const endpoint = [this.markersValue[1].lng, this.markersValue[1].lat];
+    const lastMarker = this.markersValue[this.markersValue.length -1];
+    const endpoint = [lastMarker.lng, lastMarker.lat];
     const map = this.map;
+    let wayCoords = []
+    this.markersValue.slice(0,-1).forEach((element) => {
+      wayCoords.push(`${element.lng + "%2C" + element.lat + "%3B"}`)
+    });
+    wayCoords.push(`${lastMarker.lng + "%2C" + lastMarker.lat}`);
+    let waypoints = wayCoords.join('');
+
+
+    // -8.590245 % 2C41.150756 % 3B-8.612786 % 2C41.148264 % 3B - 8.617216 % 2C41.157438
+    //api.mapbox.com/directions/v5/mapbox/walking/-9.158779%2C38.738893%3B-9.1501%2C38.739055?continue_straight=false&geometries=geojson&language=en&overview=simplified&steps=true&access_token
 
     async function getRoute(end) {
       // make a directions request using cycling profile
       // an arbitrary start will always be the same
       // only the end or destination will change
       const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/walking/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${waypoints}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
         { method: 'GET' }
       );
+
       const json = await query.json();
       const data = json.routes[0];
       const route = data.geometry.coordinates;
