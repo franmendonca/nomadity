@@ -22,9 +22,13 @@
       </div>
    </div>
       <div class="col-5 m-3">
-        <%= render "shared/mapbox" %>
+        <div class="map">
+          <%= render "shared/mapbox" %>
+        </div>
+        <div class="directions">
+          <button data-action="click->drag#send" class="btn btn-primary">Plain your route</button>
+        </div>
       </div>
   </div>
-  <button data-action="click->drag#send"> LETS go</button>
 
 </div>
