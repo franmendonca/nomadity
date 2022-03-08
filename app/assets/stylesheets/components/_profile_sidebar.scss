@@ -2,28 +2,10 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin: 8px;
   background-size: cover;
-  justify-content: center;
-  align-items: center;
 
 }
 
-.user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-sm {
-  display: grid;
-  font-size: 12px;
-  height: 40px;
-  width: 130px;
+.buttons {
   border-radius: 25px;
-  margin: 2px 0;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
 }
