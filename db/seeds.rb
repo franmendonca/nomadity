@@ -161,9 +161,9 @@ manna.save
 early = Experience.create!(
   city: city2,
   category: category8,
-  name: "Early", address: "Praça Dona Filipa de Lencastre Nº25, 4050-259 Porto",
+  name: "Early", address: "Rua dos Bragas 374, 4050-122 Porto",
   description: "Patrícia and Emanuel, siblings, have come to give a breath of fresh air to the address of the old bookstore Contraste. On Rua dos Bragas, EARLY opens early and serves breakfast, brunch, lunch and snacks. The book-filled display was left behind but the idea that also resembles the world of reading is kept: life should be lived calmly, enjoyed with no rush and accompanied by a warm drink and a slice of homemade cake, just like a good book.",
-  website_url: "https://crucreativehub.com/en/"
+  website_url: "http://www.early.pt"
 )
 
 ephoto1 = URI.open("http://early.pt/images/LF_EARLY-109.JPG")
@@ -284,14 +284,14 @@ hotpod.photos.attach(io: hotpodphoto2, filename: 'pod2', content_type: 'image/jp
 
 hotpod.save
 
-latitudep = rand(41.14..41.17)
-longitudep = rand(-8.69..-8.59)
-latitudel = rand(38.69..38.80)
-longitudel = rand(-9.30..-9.10)
+latitudep = rand(41.1425..41.15)
+longitudep = rand(-8.63..-8.59)
+latitudel = rand(38.713..38.726)
+longitudel = rand(-9.14..-9.12)
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   yoga1 = Experience.create!(
     city: city1,
     category: category1,
@@ -313,8 +313,8 @@ longitudel = rand(-9.30..-9.10)
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   yoga2 = Experience.create!(
     city: city2,
     category: category1,
@@ -336,8 +336,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   cowork1 = Experience.create!(
     city: city1,
     category: category2,
@@ -359,8 +359,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   cowork2 = Experience.create!(
     city: city2,
     category: category2,
@@ -382,8 +382,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   grocery1 = Experience.create!(
     city: city1,
     category: category3,
@@ -405,8 +405,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   grocery2 = Experience.create!(
     city: city2,
     category: category3,
@@ -428,8 +428,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   gym1 = Experience.create!(
     city: city1,
     category: category4,
@@ -451,8 +451,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   gym2 = Experience.create!(
     city: city2,
     category: category4,
@@ -474,8 +474,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   cafe1 = Experience.create!(
     city: city1,
     category: category5,
@@ -497,8 +497,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   cafe2 = Experience.create!(
     city: city2,
     category: category5,
@@ -520,8 +520,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   coliving1 = Experience.create!(
     city: city1,
     category: category6,
@@ -543,8 +543,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   coliving2 = Experience.create!(
     city: city2,
     category: category6,
@@ -566,8 +566,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   night1 = Experience.create!(
     city: city1,
     category: category7,
@@ -589,8 +589,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   night2 = Experience.create!(
     city: city2,
     category: category7,
@@ -612,8 +612,8 @@ end
 end
 
 5.times do
-  latitudel = rand(38.69..38.80)
-  longitudel = rand(-9.30..-9.10)
+  latitudel = rand(38.713..38.726)
+  longitudel = rand(-9.14..-9.12)
   restaurant1 = Experience.create!(
     city: city1,
     category: category8,
@@ -635,8 +635,8 @@ end
 end
 
 5.times do
-  latitudep = rand(41.14..41.17)
-  longitudep = rand(-8.69..-8.59)
+  latitudep = rand(41.1425..41.15)
+  longitudep = rand(-8.63..-8.59)
   restaurant2 = Experience.create!(
     city: city2,
     category: category8,

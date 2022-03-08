@@ -37,7 +37,7 @@
   }
   &__content {
     width: 90%;
-    height: 95%;
+    height: 80%;
     background: #F4F4F4;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     margin: 8px auto;
@@ -62,7 +62,7 @@
 @media (min-width: 100px) and (max-width: 575px) {
 
   .card {
-    min-height: 40vh;
+    min-height: 45vh;
     &__container{
       grid-template-columns: 1fr;
     }
@@ -73,7 +73,7 @@
 @media (min-width: 576px) {
 
   .card {
-    min-height: 40vh;
+    min-height: 45vh;
     &__container{
       grid-template-columns: 1fr;
     }
@@ -84,7 +84,7 @@
 @media (min-width: 768px) {
 
   .card {
-    min-height: 50vh;
+    min-height: 60vh;
     &__container{
       grid-template-columns: 1fr 1fr;
 
@@ -96,6 +96,7 @@
 @media (min-width: 992px) {
 
   .card {
+    min-height: 50vh;
     &__container{
       grid-template-columns: 1fr 1fr;
     }
@@ -108,7 +109,6 @@
   .card {
     &__container{
       grid-template-columns: 1fr 1fr 1fr;
-      min-height: 50vh;
     }
   }
 }
