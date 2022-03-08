@@ -6,7 +6,16 @@ class PagesController < ApplicationController
 
   def directions
     @order = params[:orders].split(",")
-    @experiences = Experience.find(@order)
+    @experiences = Experience.where(id: @order)
+
+    @markers = @experiences.geocoded.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude,
+        category: experience.category.ref,
+        info_window: render_to_string(partial: "shared/info_window", locals: { experience: experience })
+      }
+    end
   end
 
   def profile
@@ -22,21 +31,16 @@ class PagesController < ApplicationController
       @all_favorites = filtered_favorites
     else
       @all_favorites = @user.all_favorited
-
     end
 
     @markers = Experience.where(id: @all_favorites.map(&:id)).geocoded.map do |favorite|
-    {
-      lat: favorite.latitude,
-      lng: favorite.longitude,
-      image_url: helpers.asset_url("logo.jpg"),
-      category: favorite.category.ref,
-      info_window: render_to_string(partial: "shared/info_window", locals: { experience: favorite })
-    }
+      {
+        lat: favorite.latitude,
+        lng: favorite.longitude,
+        image_url: helpers.asset_url("logo.jpg"),
+        category: favorite.category.ref,
+        info_window: render_to_string(partial: "shared/info_window", locals: { experience: favorite })
+      }
+    end
   end
-
-  end
-
-
-
 end
