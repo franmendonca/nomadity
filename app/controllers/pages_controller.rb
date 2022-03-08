@@ -4,6 +4,11 @@ class PagesController < ApplicationController
   def home
   end
 
+  def directions
+    @order = params[:orders].split(",")
+    @experiences = Experience.find(@order)
+  end
+
   def profile
     @user = current_user
 

@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container" data-controller="drag">
   <div class=" d-flex  justify-content-between m-6">
    <div class="col-2">
     <%= render "shared/profile_sidebar" %>
@@ -9,7 +9,7 @@
         <h2>Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
       </div>
-      <div data-controller="drag">
+      <div data-drag-target="cards">
         <% @all_favorites.each do |favorite| %>
           <%= render 'shared/experience_card', experience: favorite %>
           <%= render 'shared/show_modal', experience: favorite %>
@@ -20,4 +20,6 @@
         <%= render "shared/mapbox" %>
       </div>
   </div>
+  <button data-action="click->drag#send"> LETS go</button>
+
 </div>
