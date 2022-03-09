@@ -7,13 +7,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
 .user {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.biography{
+  word-wrap: break-word;
 }
 
 .btn-sm {
@@ -35,4 +38,10 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
     z-index: 1;
     border-color: #3d3c3c !important;
+  }
+
+  .profile-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
