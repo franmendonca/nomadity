@@ -7,7 +7,8 @@
   align-items: center;
   border-radius: 25px;
   position: relative;
-  width: 90%;
+  width: 100%;
+
 
   .experience-card-header{
     display: flex;
@@ -40,6 +41,7 @@
 
   .card-experience-infos {
     padding: 16px;
+    width: 100%;
   }
 
 }
