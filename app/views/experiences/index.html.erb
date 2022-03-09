@@ -1,22 +1,16 @@
 <div class="container">
 <br>
   <div class="row">
-    <div class="col-6">
-            <div class="map">
-          <%= render "shared/mapbox" %>
-        </div>
-        <div class="directions">
-          <%= link_to "Set your route", profile_path, class: "btn btn-primary" %>
-        </div>
-
-    </div>
-    <div class="col-6 scroll">
       <div class="scrollmenu">
         <% @categories.each do |category| %>
           <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
         <% end %>
       </div>
-      <p class="index-title-results-page">Select your Route in <%= params[:city].capitalize %></p>
+    <div class="col-6 mt-3">
+      <%= render "shared/mapbox" %>
+    </div>
+    <div class="col-6 scroll">
+      <p class="index-title-results-page">Select your Route</p>
       <p class="paragraph">You selected 3/4 places for your new route</p>
         <div class="value">
           <div class="progress">

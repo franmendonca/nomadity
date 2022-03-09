@@ -1,13 +1,16 @@
 div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+
 }
 
 div.scrollmenu a {
   display: inline-block;
   color: black;
   text-align: center;
-  padding: 8px 50px;
+  padding: 8px 30px;
   text-decoration: none;
   border-radius: 25px;
   background-color: white;
