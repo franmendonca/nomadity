@@ -35,7 +35,7 @@ export default class extends Controller {
         url="https://png.pngitem.com/pimgs/s/20-202999_grocery-store-icon-png-shop-icon-transparent-png.png"
         }
         else if (marker.category == "gyms") {
-        url="https://www.svgrepo.com/show/55894/gymnast-using-gym-equipment.svg"
+        url="https://icon-library.com/images/gym-icon/gym-icon-10.jpg"
         }
         else if (marker.category == "cafes") {
         url="https://www.svgrepo.com/show/56061/latte.svg"
