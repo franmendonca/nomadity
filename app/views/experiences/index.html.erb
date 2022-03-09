@@ -2,7 +2,13 @@
 <br>
   <div class="row">
     <div class="col-6">
-      <%= render "shared/mapbox" %>
+            <div class="map">
+          <%= render "shared/mapbox" %>
+        </div>
+        <div class="directions">
+          <%= link_to "Set your route", profile_path, class: "btn btn-primary" %>
+        </div>
+
     </div>
     <div class="col-6 scroll">
       <div class="scrollmenu">
