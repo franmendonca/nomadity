@@ -1,6 +1,9 @@
 .avatar {
   width: 40px;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .avatar-large {
   width: 56px;
