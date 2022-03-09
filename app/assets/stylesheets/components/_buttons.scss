@@ -1,0 +1,13 @@
+.btn-routes{
+  border-radius: 50%;
+  background-color: $orange;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.btn-routes:hover{
+  background-color: darkorange;
+  color: white;
+  transition: 0.3s;
+}

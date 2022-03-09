@@ -1,12 +1,19 @@
 .card-experience {
   overflow: hidden;
-  height: 160px;
+  height: 180px;
   background: white;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 25px;
   position: relative;
+  width: 90%;
+
+  .experience-card-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+  }
 
   img {
     height: 100%;
@@ -25,7 +32,6 @@
     line-height: 1.4;
     opacity: .7;
     margin-left: 5px;
-    margin-bottom: 20px;
   }
 
   .fa-map-marker-alt{
@@ -36,11 +42,6 @@
     padding: 16px;
   }
 
-  .favorite-button{
-    position: absolute;
-    left: 585px;
-    bottom: 125px;
-  }
 }
 .card-experience:hover {
       transform: scale(1);
