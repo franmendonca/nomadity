@@ -1,20 +1,20 @@
 <div class="card-experience mt-3 mb-3" id="<%= experience.id %>">
-  <% if experience.photos.attached? %>
-    <%= cl_image_tag experience.photos.sample.key, crop: :fill %>
-  <% end %>
-  <div class="card-experience-infos">
-  <div class="experience-card-header">
-    <h2><%= experience.name %></h2>
-    <div class="favorite-button">
-      <%= render 'shared/favorite_button', experience: experience %>
+    <% if experience.photos.attached? %>
+      <%= cl_image_tag experience.photos.sample.key, crop: :fill %>
+    <% end %>
+    <div class="card-experience-infos">
+    <div class="experience-card-header">
+      <h2><%= experience.name %></h2>
+      <div class="favorite-button">
+        <%= render 'shared/favorite_button', experience: experience %>
+      </div>
+    </div>
+      <div class ="d-flex">
+        <i class="fas fa-map-marker-alt mb-20"></i>
+        <p> <%= experience.address %></p>
+      </div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experience<%= experience.id %>">
+        Show
+      </button>
     </div>
   </div>
-    <div class ="d-flex">
-      <i class="fas fa-map-marker-alt mb-20"></i>
-      <p> <%= experience.address %></p>
-    </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experience<%= experience.id %>">
-  Show
-</button>
-  </div>
-</div>

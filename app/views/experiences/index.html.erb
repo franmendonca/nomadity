@@ -18,7 +18,12 @@
       <br>
       <div>
         <% @experiences.each do |experience| %>
+        <div class = "d-flex align-items-center justify-content-around">
           <%= render 'shared/experience_card', experience: experience %>
+          <button type="button" class="btn btn-routes">
+            <i class="fas fa-check"></i>
+          </button>
+        </div>
           <%= render 'shared/show_modal', experience: experience %>
         <% end %>
       </div>
