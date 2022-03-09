@@ -10,10 +10,10 @@
       <%= form_with url:categories_path, method: :get do |f| %>
         <div class="search-form-control">
           <div>
-            <%= f.collection_select(:city, City.all, :ref, :name, options = {:prompt => 'Choose a City'}, {class: 'search-form'})%>
+            <%= f.collection_select(:city, City.all, :ref, :name, options = {:prompt => 'Choose another City'}, {class: 'search-form'})%>
           </div>
           <div>
-            <%= f.submit "Let's start!", class: "btn btn-primary"%>
+            <%= f.submit "Let's go!", class: "btn btn-primary"%>
           </div>
         </div>
       <% end %>
