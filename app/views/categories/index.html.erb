@@ -1,14 +1,17 @@
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
-</div>
-<p class="index-title">Select your category in <%= params[:city].capitalize %></p>
-<div class="container">
-  <div class="grid">
-    <% @categories.each do |category| %>
-      <div class="grid-item zoom">
-        <%= link_to (cl_image_tag(category.photo.key, :class=>"icon")  if category.photo.key.present?),  experiences_path(category: category.ref, city: params[:city]) %>
-        <h2> <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %> </h2>
-      </div>
-    <% end %>
+<div class="value">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
   </div>
+    <p class="progress-value">25%</p>
 </div>
+  <p class="index-title">Select your category in <%= params[:city].capitalize %></p>
+    <div class="container">
+      <div class="grid">
+        <% @categories.each do |category| %>
+          <div class="grid-item zoom">
+            <%= link_to (cl_image_tag(category.photo.key, :class=>"icon")  if category.photo.key.present?),  experiences_path(category: category.ref, city: params[:city]) %>
+            <h2> <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %> </h2>
+          </div>
+        <% end %>
+      </div>
+    </div>
