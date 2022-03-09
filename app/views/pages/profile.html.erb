@@ -17,6 +17,7 @@
         <h2 class="index-title">Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
         <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
       </div>
+      <div><p class="paragraph">Drag your favorite locations into the order you'd like to visit them and click get directions to map out your day!</p></div>
       <div data-drag-target="cards">
         <% @all_favorites.each do |favorite| %>
           <%= render 'shared/experience_card', experience: favorite %>
