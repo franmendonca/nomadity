@@ -27,3 +27,11 @@
   align-items: center;
   vertical-align: middle;
 }
+
+
+.btn-sm:hover{
+    transform: scale(0.9);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-color: #3d3c3c !important;
+  }
