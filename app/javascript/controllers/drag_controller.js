@@ -8,6 +8,7 @@ export default class extends Controller {
   static targets = ["cards"]
 
   connect() {
+    console.log("you are connected!")
     console.log(this.cardsTarget)
     this.sortable = Sortable.create(this.cardsTarget, {
       onEnd: this.end.bind(this)

@@ -4,6 +4,7 @@ class ExperiencesController < ApplicationController
     @experiences = Experience.all
 
     if params[:category].present?
+      session[:category] = params[:category]
       @category = Category.find_by(ref: params[:category])
       @experiences = @experiences.where(category: @category)
     end

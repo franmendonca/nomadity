@@ -103,7 +103,7 @@ export default class extends Controller {
       // an arbitrary start will always be the same
       // only the end or destination will change
       const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/walking/${waypoints}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${waypoints}?alternatives=true&continue_straight=false&geometries=geojson&language=en&overview=simplified&steps=true&access_token=${mapboxgl.accessToken}`,
         { method: 'GET' }
       );
 
@@ -151,7 +151,7 @@ export default class extends Controller {
       }
       instructions.innerHTML = `<p><strong>Trip duration: ${Math.floor(
         data.duration / 60
-      )} min 🚴 </strong></p><ol>${tripInstructions}</ol>`;
+      )} min 🚶‍♂️ </strong></p><ol>${tripInstructions}</ol>`;
     }
 
     map.on('load', () => {
