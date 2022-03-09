@@ -16,7 +16,7 @@
           <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
         <% end %>
       </div>
-      <p class="index-title-results-page">Browse our Categories</p>
+      <p class="index-title-results-page">Browse our Categories in <%= params[:city].capitalize %></p>
       <p class="paragraph">Click the heart to favorite places you like and when you're ready to map out your day, go to set your route!</p>
         <div class="value">
           <div class="progress">
