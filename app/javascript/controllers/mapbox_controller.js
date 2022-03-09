@@ -41,7 +41,7 @@ export default class extends Controller {
         url="https://www.svgrepo.com/show/56061/latte.svg"
         }
         else if (marker.category == "coliving") {
-        url="https://cdn3.vectorstock.com/i/thumb-large/32/17/roommates-black-glyph-icon-vector-32783217.jpg"
+        url="https://cdn.iconscout.com/icon/premium/png-512-thumb/co-living-2690700-2234394.png"
         }
         else if (marker.category == "nightlife") {
         url="https://www.svgrepo.com/show/190609/disco-ball-disco.svg"
