@@ -41,7 +41,8 @@
         <div class="col-8">
           <div class="modal-body">
             <p> <%= experience.description %></p>
-            <p> <i class="fas fa-map-marker-alt mb-20"></i><strong><%= experience.address %> <%= experience.latitude %> <%= experience.longitude %></strong></p>
+            <p> <i class="fas fa-map-marker-alt mb-20"></i><strong><%= experience.address %></strong></p>
+            <p> Coordinates: <%= experience.latitude %>, <%= experience.longitude %></p>
             <p><img src="https://cdn-icons-png.flaticon.com/512/6996/6996694.png" width="30" height="30" id="web"> <strong> Website: </strong><a href= "<%=experience.website_url %>"> <%=experience.website_url %></a></p>
           </div>
         </div>
