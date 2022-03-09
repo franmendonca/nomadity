@@ -2,15 +2,16 @@
 .error {
   margin: 20px;
   position: relative;
-  width: 1300px;
-  height: 1024px;
-  background-image: url("battlesheep.jpg");
+  width: 1200px;
+  height: 750px;
+  background: url("battlesheep.jpg");
+  background-size: cover;
 }
 
 .text {
   position: relative;
-  top: 600px;
-  left: 100px;
+  top: 320px;
+  left: 56px;
   align-items: center;
   font-family: Impact, Charcoal, sans-serif;
   font-size: 29px;
@@ -22,5 +23,5 @@
   font-style: normal;
   font-variant: normal;
   text-transform: uppercase;
-
+  text-shadow: 4px 3px 0 #515050; ;
 }
