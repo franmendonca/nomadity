@@ -5,13 +5,13 @@
     </div>
       <p class="progress-value">100%</p>
   </div>
-    <h1>hello</h1>
-      <div class="row">
-        <div class="col-8">
-          <%= render "shared/directions_mapbox" %>
-        </div>
-          <div class="col-4">
-          <div id="instructions"></div>
-        </div>
-      </div>
+  <%= link_to "Go back", profile_path, class: "btn btn-primary mb-3" %>
+  <div class="row">
+    <div class="col-8">
+      <%= render "shared/directions_mapbox" %>
+    </div>
+      <div class="col-4">
+      <div id="instructions"></div>
+    </div>
+  </div>
 </div>
