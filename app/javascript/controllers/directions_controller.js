@@ -35,7 +35,7 @@ export default class extends Controller {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       let url;
-      console.log(marker)
+      //console.log(marker)
       if (marker.category == "yoga") {
         url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_yoga_-248-n_1_yydoiw.svg"
 
@@ -83,6 +83,7 @@ export default class extends Controller {
   }
 
   #getDirections(){
+    console.log(this.markersValue)
     const start = [ this.markersValue[0].lng,this.markersValue[0].lat ];
     const lastMarker = this.markersValue[this.markersValue.length -1];
     const endpoint = [lastMarker.lng, lastMarker.lat];
@@ -93,6 +94,7 @@ export default class extends Controller {
     });
     wayCoords.push(`${lastMarker.lng + "%2C" + lastMarker.lat}`);
     let waypoints = wayCoords.join('');
+    console.log(waypoints)
 
 
     // -8.590245 % 2C41.150756 % 3B-8.612786 % 2C41.148264 % 3B - 8.617216 % 2C41.157438
@@ -103,7 +105,7 @@ export default class extends Controller {
       // an arbitrary start will always be the same
       // only the end or destination will change
       const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/walking/${waypoints}?alternatives=true&continue_straight=false&geometries=geojson&language=en&overview=simplified&steps=true&access_token=${mapboxgl.accessToken}`,
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${waypoints}?alternatives=true&continue_straight=true&geometries=geojson&language=en&overview=simplified&steps=true&access_token=${mapboxgl.accessToken}`,
         { method: 'GET' }
       );
 

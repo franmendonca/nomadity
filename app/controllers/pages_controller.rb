@@ -6,9 +6,11 @@ class PagesController < ApplicationController
 
   def directions
     @order = params[:orders].split(",")
-    @experiences = Experience.where(id: @order)
-
-    @markers = @experiences.geocoded.map do |experience|
+    @experiences = []
+    @order.each do |order|
+      @experiences << Experience.find(order)
+    end
+    @markers = @experiences.map do |experience|
       {
         lat: experience.latitude,
         lng: experience.longitude,
