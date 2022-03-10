@@ -8,14 +8,14 @@
   </div>
   <br>
     <div class=" d-flex  justify-content-between m-6">
-    <div class="col-2 m-3">
-          <%= link_to "Go back", "javascript:history.back()", class: "btn btn-primary mb-3" %>
+    <div class="col-2 m-3 mt-0">
+          <%= link_to "Go back", "javascript:history.back()", class: "btn btn-secondary mb-3" %>
       <%= render "shared/profile_sidebar" %>
     </div>
     <br>
-    <div class="col-5 m-3">
+    <div class="col-5 m-3 mt-0">
         <div class="d-flex">
-          <h2 class="index-title">Favorited in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
+          <h2 class="index-title">Check out your favorites in : <%= link_to "Lisbon" , { :controller => "pages", :action => 'profile' , :query => "lisbon"} , class: "btn btn-primary" %>
           <%= link_to "Porto", {:controller => "pages", :action => 'profile', :query => "porto"}, class: "btn btn-primary" %> </h2>
         </div>
         <div><p class="paragraph">Drag your favorite locations into the order you'd like to visit them and click <strong>get directions </strong> to map out your day!</p></div>
@@ -27,7 +27,7 @@
           <% end %>
         </div>
     </div>
-    <div class="col-5 m-3">
+    <div class="col-4 m-3 mt-0">
       <%= render "shared/mapbox" %>
     </div>
   </div>
