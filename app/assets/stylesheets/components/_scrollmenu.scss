@@ -18,6 +18,10 @@ div.scrollmenu a {
   box-shadow: 0 0 10px rgba(83, 83, 83, 0.1);
 }
 
+#scroll-btn:active{
+  background-color: black;
+}
+
 div.scrollmenu a:hover {
   background-color: #e7e6e6;
   transition: 0.3s;
