@@ -202,7 +202,7 @@ selina = Experience.create!(
   city: city2,
   category: category2,
   name: "Selina Navi",
-  latidude: 41.14989388364887, longitude: -8.614461948922195,
+  latitude: 41.14989388364887, longitude: -8.614461948922195,
   description: "Get sh*t done at our urban coworking space in Porto, Portugal! Count on fast and reliable Wi-Fi, meeting rooms, and additional facilities to stay productive alongside a vibrant community of locals and nomads.",
   website_url: "https://www.selina.com/portugal/porto/"
 )
