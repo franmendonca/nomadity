@@ -8,7 +8,7 @@
 </div>
 <br>
   <div class=" d-flex  justify-content-between m-6">
-   <div class="col-2">
+   <div class="col-2 m-3">
         <%= link_to "Go back", "javascript:history.back()", class: "btn btn-primary mb-3" %>
     <%= render "shared/profile_sidebar" %>
    </div>
@@ -27,12 +27,8 @@
       </div>
    </div>
       <div class="col-5 m-3">
-        <div class="map">
-          <%= render "shared/mapbox" %>
-        </div>
-        <div class="directions">
-          <button data-action="click->drag#send" class="btn btn-primary">Get directions</button>
-        </div>
+        <button id="getDirections" data-action="click->drag#send" class="btn btn-primary">Get directions</button>
+        <%= render "shared/mapbox" %>
       </div>
   </div>
 

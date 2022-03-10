@@ -3,16 +3,13 @@
 
 }
 
-.map {
-  position: relative;
-  z-index: 1;
-}
 
-.directions {
+#getDirections {
+  right: 10px;
+  flex: end;
+  margin-bottom: 8px;
   position: relative;
-  z-index: 2;
-  top: -580px;
-  right: -60px;
+  left: 330px;
 }
 
 .btn-primary {
