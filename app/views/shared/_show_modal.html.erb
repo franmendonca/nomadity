@@ -18,9 +18,9 @@
             <div class="carousel-inner">
               <% if experience.photos.attached? %>
                 <div class="carousel-item active">
-                  <%= cl_image_tag experience.photos.sample.key, height: 300, width: 400, crop: :fill %>
+                  <%= cl_image_tag experience.photos.first.key, height: 300, width: 400, crop: :fill %>
                 </div>
-                <% experience.photos.each do |photo| %>
+                <% experience.photos.drop(1).each do |photo| %>
                 <div class="carousel-item">
                   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
                   </div>
