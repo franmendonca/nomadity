@@ -4,7 +4,7 @@
       data-favorites-url-value='<%= favorite_url(experience) %>'
       data-favorites-verb-value='DELETE'
       data-action='click->favorites#send'>
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-heart fa-lg"></i>
   </div>
 <% else %>
   <div data-controller='favorites'
@@ -12,6 +12,6 @@
       data-favorites-url-value='<%= experience_favorites_url(experience) %>'
       data-favorites-verb-value='POST'
       data-action='click->favorites#send'>
-    <i class="far fa-heart"></i>
+    <i class="far fa-heart fa-lg"></i>
   </div>
 <% end %>
