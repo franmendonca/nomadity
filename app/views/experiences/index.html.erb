@@ -6,11 +6,11 @@
           <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]), id: "scroll-btn" %>
         <% end %>
       </div>
-    <div class="col-6 mt-3">
+    <div class="col-6 mt-4">
       <%= render "shared/mapbox" %>
     </div>
-    <div class="col-6 scroll">
-       <h2 class="index-title">Browse our Categories in <%= params[:city].capitalize %></h2>
+    <div class="col-6 mt-3 scroll">
+       <h2 class="index-title">You are browsing <%= params[:category].capitalize %> in <%= params[:city].capitalize %></h2>
       <p class="paragraph">Click the heart to favorite places you like and when you're ready to plan out your day, <strong>go to set your route! </strong></p>
         <div class="value">
           <div class="progress">

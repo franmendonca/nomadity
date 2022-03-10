@@ -13,10 +13,10 @@
     background-color: white;
     color:  $orange;
     border: 0.5px solid grey;
-    box-shadow: 1px 1px 2px #aeabab;
+    box-shadow: none;
   }
   .btn-primary:hover{
-    box-shadow: 3px 3px 6px #aeabab;
+    box-shadow: 1px 1px 2px #aeabab;
   }
   .experience-card-header{
     display: flex;
@@ -58,4 +58,15 @@
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
       z-index: 1;
       border-color: #ca5b00 !important;
+  }
+
+  .btn-profile{
+    background-color: white;
+    color:  $orange;
+    border: 0.5px solid grey;
+    box-shadow: none;
+  }
+  .btn-profile:hover{
+    box-shadow: 1px 1px 2px #aeabab;
+    color: $orange;
   }
