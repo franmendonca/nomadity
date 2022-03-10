@@ -9,7 +9,14 @@
   position: relative;
   width: 100%;
 
-
+  .btn-primary{
+    background-color: white;
+    color:  $orange;
+    border: 1px solid grey;
+  }
+  .btn-primary:hover{
+    box-shadow: 3px 3px 6px #aeabab;
+  }
   .experience-card-header{
     display: flex;
     justify-content: space-between;
