@@ -10,6 +10,7 @@
     h3{
       padding: 5px 0px;
       font-weight: bolder;
+      margin: 10px 0;
     }
     p{
       font-size: 12px;
@@ -21,7 +22,7 @@
     }
 }
 .card {
-  width: 60%;
+  width: 80%;
   height: 80%;
 
   text-align: center;
@@ -109,6 +110,7 @@
 @media (min-width: 1200px) {
 
   .card {
+    min-height: 45vh;
     &__container{
       grid-template-columns: 1fr 1fr 1fr;
     }
