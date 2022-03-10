@@ -37,30 +37,29 @@ export default class extends Controller {
       let url;
       //console.log(marker)
       if (marker.category == "yoga") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_yoga_-248-n_1_yydoiw.svg"
-
-      }
-      else if (marker.category == "cowork") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_shared_workspace_re_3gsu_gn2me7.svg"
-      }
-      else if (marker.category == "grocery") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665175/undraw_shopping_app_flsj_zstypw.svg"
-      }
-      else if (marker.category == "gyms") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665146/undraw_personal_trainer_ote3_bapr18.svg"
-      }
-      else if (marker.category == "cafes") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_coffee_re_x35h_v8e28j.svg"
-      }
-      else if (marker.category == "coliving") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_building_re_xfcm_arfxpa.svg"
-      }
-      else if (marker.category == "nightlife") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_wine_tasting_-30-vw_vxyh9r.svg"
-      }
-      else if (marker.category == "restaurants") {
-        url = "https://res.cloudinary.com/di2awrsge/image/upload/v1646665145/undraw_chef_cu-0-r_sa2zou.svg"
-      }
+        url="https://www.svgrepo.com/show/67653/buddhist-yoga-pose.svg"
+        }
+        else if (marker.category == "cowork") {
+        url="https://cdn-icons-png.flaticon.com/512/1965/1965701.png"
+        }
+        else if (marker.category == "grocery") {
+        url="https://png.pngitem.com/pimgs/s/20-202999_grocery-store-icon-png-shop-icon-transparent-png.png"
+        }
+        else if (marker.category == "gyms") {
+        url="https://icon-library.com/images/gym-icon/gym-icon-10.jpg"
+        }
+        else if (marker.category == "cafes") {
+        url="https://www.svgrepo.com/show/56061/latte.svg"
+        }
+        else if (marker.category == "coliving") {
+        url="https://cdn.iconscout.com/icon/premium/png-512-thumb/co-living-2690700-2234394.png"
+        }
+        else if (marker.category == "nightlife") {
+        url="https://www.svgrepo.com/show/190609/disco-ball-disco.svg"
+        }
+        else if (marker.category == "restaurants") {
+        url="https://www.svgrepo.com/show/160848/knife-and-fork-in-a-square-for-interface-symbol-for-restaurants.svg"
+        }
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
