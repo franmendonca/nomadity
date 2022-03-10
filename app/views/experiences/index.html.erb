@@ -3,7 +3,7 @@
   <div class="row">
       <div class="scrollmenu">
         <% @categories.each do |category| %>
-          <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]) %>
+          <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]), id: "scroll-btn" %>
         <% end %>
       </div>
     <div class="col-6 mt-3">
