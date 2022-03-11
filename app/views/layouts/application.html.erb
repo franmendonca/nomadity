@@ -35,6 +35,8 @@
   <div class="container vh-height">
     <%if current_page?(root_path)%>
       <%= render 'home/home-navbar'  %>
+    <% elsif current_page?(categories_path) %>
+      <%= render 'home/home-navbar'  %>
     <% else %>
       <%= render 'shared/navbar' %>
     <% end %>
