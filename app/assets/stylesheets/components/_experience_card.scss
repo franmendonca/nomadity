@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 180px;
   background: white;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 2.5px 2.5px 8px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -12,11 +12,8 @@
   .btn-primary{
     background-color: white;
     color:  $orange;
-    border: 0.5px solid grey;
+    border: 0.5px solid #666;
     box-shadow: none;
-  }
-  .btn-primary:hover{
-    box-shadow: 1px 1px 2px #aeabab;
   }
   .experience-card-header{
     display: flex;
@@ -55,7 +52,7 @@
 }
 .card-experience:hover {
       transform: scale(1);
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
       z-index: 1;
       border-color: #ca5b00 !important;
   }

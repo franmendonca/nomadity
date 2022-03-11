@@ -1,9 +1,9 @@
 <div class="container">
 <br>
   <div class="row">
-      <div class="scrollmenu">
+      <div class="scrollmenu" data-controller="categories">
         <% @categories.each do |category| %>
-          <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]), id: "scroll-btn" %>
+          <%= link_to "#{category.name}", experiences_path(category: category.ref, city: params[:city]), id: category.ref %>
         <% end %>
       </div>
     <div class="col-6 mt-4">
