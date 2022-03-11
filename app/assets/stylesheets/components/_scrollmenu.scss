@@ -14,15 +14,14 @@ div.scrollmenu a {
   text-decoration: none;
   border-radius: 25px;
   background-color: white;
-  border: 0.5px solid grey;
-  box-shadow: 0 0 10px rgba(83, 83, 83, 0.1);
+  border: 0.5px solid #666;
 }
 
-#scroll-btn:active{
-  background-color: black;
+.active-cat{
+  background-color: #e8e9e9!important;
 }
 
 div.scrollmenu a:hover {
-  background-color: #e7e6e6;
+  background-color: #e8e9e9;
   transition: 0.3s;
 }
