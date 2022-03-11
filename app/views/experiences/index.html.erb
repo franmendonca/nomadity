@@ -10,7 +10,7 @@
       <%= render "shared/mapbox" %>
     </div>
     <div class="col-6 mt-3 scroll">
-       <h2 class="index-title">You are browsing <%= params[:category].capitalize %> in <%= params[:city].capitalize %></h2>
+       <h2 class="index-title">You are browsing <%= @category.name %> in <%= params[:city].capitalize %></h2>
       <p class="paragraph">Click the heart to favorite places you like and when you're ready to plan out your day, <strong>go to set your route! </strong></p>
         <div class="value">
           <div class="progress">
