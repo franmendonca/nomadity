@@ -204,7 +204,12 @@ export default class extends Controller {
       }
       getRoute(coords);
 
-
+      // reload map
+       var refreshBuilder = MapboxDirectionsRefresh.builder()
+        .accessToken(accessToken)
+        .requestId(route.routeOptions()?.requestUuid())
+        .legIndex(legIndex)
+      //reload map
       map.on('click', (event) => {
 
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
