@@ -2,6 +2,12 @@
 
 ## Nomad living made easy
 
+Link: https://www.nomadity.live/
+
+Access: You can create an account or use our dummy account 
+ Acount: pedro@lewagon.com
+ Password: 12345678
+ 
 Framework: Ruby on Rails 6
 
 Contributors: franmendonca, rbchapman, revdep, Nicoredin98
@@ -16,7 +22,7 @@ At the moment the app is functional in two cities, Lisbon and Porto, with a mix 
 
 Sign-up is needed to view the app after the categories page, due to authentication with the gem devise.
 
-App responsiveness for mobile is on its way.
+App responsiveness for mobile and other desktop resolution is on its way.
 
 ### Contributions 💪
 
